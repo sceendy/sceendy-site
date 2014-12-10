@@ -1,0 +1,5 @@
+@mixin align-items($value) {
+  -webkit-align-items: $value;
+	-moz-align-items: $value;
+	align-items: $value;
+}

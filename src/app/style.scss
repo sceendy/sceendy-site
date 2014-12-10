@@ -1,0 +1,22 @@
+/* Sceendy Scss Structure */
+
+/* Base - Base variables with seedy mixins */
+
+@import 'scss/base/_base.scss';
+@import 'scss/base/_mixins.scss';
+
+/* Grid - The plate for structure and layout */
+
+@import 'scss/grid/_grid.scss';
+
+/* Theme - The juicy stuff! Different areas of the site */
+
+@import 'scss/theme/_header.scss';
+@import 'scss/theme/_main.scss';
+@import 'scss/theme/_footer.scss';
+
+/* Goodies - Add some styling to the modules! */
+
+@import 'scss/modules/_buttons.scss';
+@import 'scss/modules/_lists.scss';
+@import 'scss/modules/_forms.scss';
