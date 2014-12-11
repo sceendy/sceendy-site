@@ -1,52 +1,8 @@
 'use strict';
 
-angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute'])
-  .config(function ($routeProvider, $locationProvider) {
-
-    $locationProvider.html5Mode(true);
-
-    $routeProvider
-      .when('/', {
-        templateUrl: 'app/views/home.html',
-      })
-      .when('/portfolio', {
-        templateUrl: 'app/views/portfolio.html',
-        controller: 'portfolioCtrl'
-      })
-      .when('/blog', {
-        templateUrl: 'app/views/blog.html',
-        controller: 'blogCtrl'
-      })
-      .when('/blog/day-in-the-life', {
-        templateUrl: 'app/views/entry.html',
-        controller: 'blogCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  })
-
-  // BLOG Controller
-  .controller('blogCtrl', function ($scope) {
-    $scope.blog = [
-    {
-      title:'The Day in the Life of a Front-end Developer',
-      date: 'December 09, 2014',
-      content: 'Let me start out by saying that, yes, I did get this idea from the other frontend dev blogs that I browse. I saw a wave of talented front-end web developers blog about what a day in their life is like'
-    }
-    ];
-  })
-
-  // PORTFOLIO Controller
-
+angular.module('sceendyApp')
   .controller('portfolioCtrl', function ($scope) {
-    $scope.workItem = [
-    {
-      client:'Studio Movie Grill',
-      url: 'ticketdeals.studiomoviegrill.com/',
-      skills: ['HTML/CSS', 'PHP'],
-      summary: 'I made this mini-site for the $5 ticket deals that SMG provides along with a backend developer that made the database where the deals were stored.'
-    },
+  $scope.workItem = [
     {
       client:'Visionworks',
       url: 'www.visionworks.com/info/',
@@ -78,6 +34,12 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute'])
       summary: 'Customized a WordPress theme, installed plugins, improved layout/accessibilty, and better web presence. '
     },
     {
+      client:'Studio Movie Grill',
+      url: 'ticketdeals.studiomoviegrill.com/',
+      skills: ['HTML/CSS', 'PHP'],
+      summary: 'I made this mini-site for the $5 ticket deals that SMG provides along with a backend developer that made the database where the deals were stored.'
+    },
+    {
       client:'Extraco Banks',
       url: 'www.extracobanks.com/rewards/',
       skills: ['HTML/CSS', 'Angular', 'jQuery'],
@@ -101,6 +63,5 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute'])
       skills: ['HTML/SCSS', 'JS', 'Angular', 'PHP'],
       summary: 'Designed and developed custom WordPress theme. Managing content.'
     }
-    ];
-  })
-;
+  ];
+});

@@ -32,6 +32,7 @@
   height:30px;
   display:inline-block;
   text-shadow: darken($main-blue, 10%) 1px 0px 4px;
+  margin:0 3px;
   &:hover {
     background:$link-hover;
     text-shadow:none;

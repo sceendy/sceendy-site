@@ -1,0 +1,20 @@
+<article>
+  <div class="row">
+    <header class="col-md-12 col-xs-12">
+      <h3>Blog</h3>
+      <ul class="breadcrumb">
+        <li><a href="/">home</a> &gt;</li>
+        <li>Blog</li>
+      </ul>
+    </header>
+  </div>
+  <div class="row">
+    <section ng-repeat="blog in blog" class="col-md-6">
+      <h4>{{blog.title}}</h4>
+      <time>{{blog.date}}</time>
+      <p class="summary">
+        {{blog.content}}<a href="/blog/day-in-the-life">[...]</a>
+      </p>
+    </section>
+  </div>
+</article>
