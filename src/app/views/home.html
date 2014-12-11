@@ -8,26 +8,36 @@
       <a href="resume-web.pdf" class="btn btn-blue"><i class="fa fa-file-pdf-o"></i> View Resume</a><a href="http://github.com/sceendy" class="btn btn-blue" target="_blank"><i class="fa fa-code"></i> View Code</a>
     </p>
   </div>
-  <div class="col-md-5 col-xs-12">
-    <h3>tweets</h3>
-    <div id="tweets"></div>
+  <div class="col-md-5 col-xs-12" ng-controller="portfolioCtrl">
+    <h3>featured project</h3>
+      <a ng-href="http://{{workItem[0].url}}" class="work" target="_blank">
+        <section>
+          <h4>{{workItem[0].client}}</h4>
+          <div class="tags" ng-repeat="tag in workItem[0].skills">{{tag}}</div>
+          <p class="summary">
+            {{workItem[0].summary}}
+          </p>
+        </section>
+      </a>
+      <p class="text-center">
+        <a class="btn btn-pink text-center" href="/portfolio"><i class="fa fa-list-alt"></i> View My Portfolio</a>
+      </p>
+    </div>
   </div>
 </section>
-<article ng-controller="portfolioCtrl">
+<article ng-controller="blogCtrl" class="component-portfolio">
   <div class="row">
-    <header class="col-md-12 col-xs-12">
-      <h3>portfolio</h3>
-    </header>
-  </div>
-  <div class="row">
-    <a ng-repeat="work in workItem" ng-href="http://{{work.url}}" class="col-sm-6 work" target="_blank">
-      <section>
-        <h4>{{work.client}}</h4>
-        <div class="tags" ng-repeat="tag in work.skills">{{tag}}</div>
+    <section class="col-md-12 col-xs-12">
+      <header>
+        <h3>Blog</h3>
+      </header>
+      <div class="col-md-6" ng-repeat="blog in blog">
+        <h4>{{blog.title}}</h4>
+        <time>{{blog.date}}</time>
         <p class="summary">
-          {{work.summary}}
+          {{blog.content}}<a href="/blog/day-in-the-life">[...]</a>
         </p>
-      </section>
-    </a>
+      </div>
+    </section>
   </div>
 </article>

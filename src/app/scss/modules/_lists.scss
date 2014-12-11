@@ -1,23 +1,11 @@
 .work {
   position:relative;
-  border-bottom:$lightgray 2px solid;
-  padding:10px 20px;
+  padding:6px 20px;
   text-decoration:none;
   color:#000;
-  width: 100%;
-  &:after{
-    content: '\f0a9';
-    font-family:'FontAwesome';
-    color:$main-pink;
-    font-size:45px;
-    position:absolute;
-    right:15px;
-    top:45px;
-  }
   &:hover {
     cursor:pointer;
     background:$lightgray;
-    border-bottom:$main-pink 2px solid;
     text-decoration:none;
     color:#000;
   }

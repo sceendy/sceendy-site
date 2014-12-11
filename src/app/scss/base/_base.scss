@@ -3,6 +3,7 @@
 /* Color Scheme */
 $main-pink: #f26454;
 $main-blue: #57A1AF;
+$main-gray: #626262;
 
 $darkgray: #333;
 $gray: #666;
@@ -10,3 +11,61 @@ $lightgray: #f1f1f1;
 
 /* Link colors */
 $link-hover: darken($main-blue,10%);
+
+/* Core Elements */
+html, body {
+  margin:0;
+  color:$darkgray;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+html {
+  height:100%;
+}
+body {
+  min-height:100%;
+  position:relative;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+  color: $main-pink;
+}
+
+h2 {
+  color:$main-blue;
+  margin-bottom: 10px;
+}
+
+h3 {
+  border-bottom:2px solid;
+  color:$main-pink;
+  text-align:center;
+  padding:5px;
+  text-transform:uppercase;
+}
+
+h4 {
+  color:$main-pink;
+  margin-bottom:0;
+}
+
+.heading-gray {
+  color:$main-gray;
+}
+
+p {
+  font-size:14px;
+}
+
+a {
+  color:$main-blue;
+  text-decoration:none;
+  &:hover {
+    color:$link-hover;
+    text-decoration:underline;
+    cursor:pointer;
+  }
+}
