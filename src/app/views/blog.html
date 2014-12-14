@@ -10,7 +10,7 @@
   </div>
   <div class="row">
     <section ng-repeat="blog in blog" class="col-md-6">
-      <a class="blog-entry">
+      <a class="blog-entry" ng-href="/blog/{{blog.slug}}">
         <h4>{{blog.title}}</h4>
         <time>{{blog.date | date: 'MMM d, y h:mm:ss a' }}</time>
         <p class="summary" ng-bind-html="blog.body | words:25"></p>

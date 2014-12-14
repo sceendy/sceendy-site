@@ -11,15 +11,15 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
       })
       .when('/portfolio', {
         templateUrl: 'app/views/portfolio.html',
-        controller: 'portfolioCtrl'
+        controller: 'portfolioController'
       })
       .when('/blog', {
         templateUrl: 'app/views/blog.html',
-        controller: 'blogCtrl'
+        controller: 'blogController'
       })
       .when('/blog/:posts', {
         templateUrl: 'app/views/entry.html',
-        controller: 'blogCtrl',
+        controller: 'blogController',
       })
       .otherwise({
         redirectTo: '/'
@@ -27,7 +27,7 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
   })
 
   // BLOG Controller
-  .controller('blogCtrl', function ($scope, $http, $resource, $sce) {
+  .controller('blogController', function ($scope, $http, $resource, $sce) {
 
     var blog_url = "sceendy.tumblr.com";
     var api_key ="2haT0E7GSPnvgRp58tts2EmlBiQXqGdL6opaBs9eO09aA9JQQ3";
@@ -46,7 +46,7 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
 
   // PORTFOLIO Controller
 
-  .controller('portfolioCtrl', function ($scope) {
+  .controller('portfolioController', function ($scope) {
     $scope.workItem = [
     {
       client:'Studio Movie Grill',
