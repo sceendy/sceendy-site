@@ -48,11 +48,3 @@ gulp.task('serve', ['watch'], function () {
 gulp.task('serve:dist', ['build'], function () {
   browserSyncInit('dist');
 });
-
-gulp.task('serve:e2e', function () {
-  browserSyncInit(['src', '.tmp'], null, []);
-});
-
-gulp.task('serve:e2e-dist', ['watch'], function () {
-  browserSyncInit('dist', null, []);
-});
