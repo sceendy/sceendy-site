@@ -1,6 +1,8 @@
 <section class="row">
   <div class="col-md-7 col-xs-12">
-    <h3>about me</h3>
+    <header class="component-heading">
+      <h3>about me</h3>
+    </header>
     <p class="indent">Pixel by pixel, I build beautiful web experiences. I have a BA in Emerging Media and Communication, that I use as a coffee cup coaster, along with some serious<i class="fa fa-heart"></i>for the internet. With a background in design, I use front-end code to make the web look nicer and cleaner.</p>
     <p class="indent">I am currently coding at a social ecommerce startup called <a href="https://joinem.com" target="_blank">Joinem</a> alongside some other awesome developers</a>. Unfortunately, that means that I am <strong>not available</strong> for freelancing or contract work at this time.
     </p>
@@ -9,35 +11,35 @@
     </p>
   </div>
   <div class="col-md-5 col-xs-12" ng-controller="portfolioCtrl">
-    <h3>featured project</h3>
-      <a ng-href="http://{{workItem[0].url}}" class="work" target="_blank">
-        <section>
-          <h4>{{workItem[0].client}}</h4>
-          <div class="tags" ng-repeat="tag in workItem[0].skills">{{tag}}</div>
-          <p class="summary">
-            {{workItem[0].summary}}
-          </p>
-        </section>
-      </a>
-      <p class="text-center">
-        <a class="btn btn-pink text-center" href="/portfolio">View My Portfolio</a>
-      </p>
-    </div>
+    <header class="component-heading">
+      <h3>featured project</h3>
+    </header>
+    <a ng-href="http://{{workItem[0].url}}" class="work" target="_blank">
+      <section>
+        <h4>{{workItem[0].client}}</h4>
+        <div class="tags" ng-repeat="tag in workItem[0].skills">{{tag}}</div>
+        <p class="summary">
+          {{workItem[0].summary}}
+        </p>
+      </section>
+    </a>
+    <p class="text-center">
+      <a class="btn btn-pink text-center" href="/portfolio">View My Portfolio</a>
+    </p>
   </div>
 </section>
 <article ng-controller="blogCtrl" class="component-portfolio">
   <div class="row">
-    <section class="col-md-12 col-xs-12">
-      <header>
-        <h3>Blog</h3>
-      </header>
-      <div class="col-md-6" ng-repeat="blog in blog">
+    <header class="col-md-12 col-xs-12 component-heading">
+      <h3>Blog</h3>
+    </header>
+    <div class="col-md-6" ng-repeat="blog in blog | limitTo: 4">
+      <a class="blog-entry" ng-href="/blog/{{blog.slug}}">
         <h4>{{blog.title}}</h4>
-        <time>{{blog.date}}</time>
-        <p class="summary">
-          {{blog.content}}<a href="/blog/day-in-the-life">[...]</a>
-        </p>
-      </div>
-    </section>
+        <time>{{blog.date | date: 'MMM d, y h:mm:ss a' }}</time>
+        <p class="summary" ng-bind-html="blog.body | words:25"></p>
+      </a>
+    </div>
   </div>
+  <a href="/blog" ng-if="blog.totalCount" class="btn btn-pink text-center">Check out other posts... </a>
 </article>

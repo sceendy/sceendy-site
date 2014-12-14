@@ -55,3 +55,18 @@ code {
 article[class^="component"] {
   padding-bottom: 85px;
 }
+
+.component-heading {
+  border-bottom:2px solid;
+  color:$main-pink;
+  margin-bottom:15px;
+}
+
+.blog-entry {
+  padding:10px 15px;
+  margin-bottom:5px;
+  &:hover {
+    text-decoration:none;
+    background:#eee;
+  }
+}

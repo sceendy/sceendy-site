@@ -95,8 +95,8 @@ gulp.task('fonts', function () {
 });
 
 gulp.task('misc', function () {
-  return gulp.src('src/**/*.ico')
-    .pipe(gulp.dest('dist'))
+  return gulp.src('src/assets/pdf/*.pdf')
+    .pipe(gulp.dest('dist/assets/pdf'))
     .pipe($.size());
 });
 
