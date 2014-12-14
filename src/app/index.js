@@ -3,11 +3,10 @@
 angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', 'ngSanitize', 'truncate'])
   .config(function ($routeProvider, $locationProvider) {
 
-    $locationProvider.html5Mode(true).hashPrefix('!');
 
     $routeProvider
       .when('/', {
-        templateUrl: 'app/views/home.html',
+        templateUrl: 'app/views/home.html'
       })
       .when('/portfolio', {
         templateUrl: 'app/views/portfolio.html',
@@ -38,7 +37,7 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
 
     // let's make sure it's working, just testing
     _resource.test(function(data, $sce){
-      console.log('Data is here status = '+ data.meta.status + ', msg = ' + data.meta.msg + ' for ' + data.response.blog.title);
+      console.log('Tumblr status = '+ data.meta.status + ', msg = ' + data.meta.msg + ' for ' + data.response.blog.title);
       $scope.blog = data.response.posts;
       $scope.blog.totalCount = data.response.blog.total_count; // eh, let's call in 'blog' for now
     });

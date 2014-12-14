@@ -2,8 +2,8 @@
   <div class="row">
     <header class="col-md-12 col-xs-12">
       <ul class="breadcrumb">
-        <li><a href="/">home</a> &gt;</li>
-        <li><a href="/blog">Blog</a>  &gt;</li>
+        <li><a href="/#/">home</a> &gt;</li>
+        <li><a href="/#/blog">Blog</a>  &gt;</li>
         <li>{{blog.title}}</li>
       </ul>
     </header>
@@ -11,11 +11,11 @@
   <div class="row">
     <section class="col-md-12">
       <h2>{{blog.title}}</h2>
-      <time>{{blog.date}}</time>
+      <time>{{blog.timestamp * 1000 | date:'MMMM d, y' : 'UTC'}}</time>
       <p class="summary" ng-bind-html="blog.body"></p>
         <p ng-if="blog.totalCount">
-          <a href="/" class="btn btn-pink">Previous Post</a>
-          <a href="/" class="btn btn-pink">Next Post</a>
+          <a href="/#/" class="btn btn-pink">Previous Post</a>
+          <a href="/#/" class="btn btn-pink">Next Post</a>
         </p>
     </section>
   </div>

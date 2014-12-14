@@ -1,18 +1,18 @@
 <article class="component-portfolio">
   <div class="row">
-    <header class="col-md-12 col-xs-12">
+    <header class="col-md-12 col-xs-12 component-heading">
       <h3>Blog</h3>
       <ul class="breadcrumb">
-        <li><a href="/">home</a> &gt; </li>
+        <li><a href="/#/">home</a> &gt; </li>
         <li>Blog</li>
       </ul>
     </header>
   </div>
   <div class="row">
     <section ng-repeat="blog in blog" class="col-md-6">
-      <a class="blog-entry" ng-href="/blog/{{blog.slug}}">
+      <a class="blog-entry" ng-href="/#/blog/{{blog.slug}}">
         <h4>{{blog.title}}</h4>
-        <time>{{blog.date | date: 'MMM d, y h:mm:ss a' }}</time>
+        <time>{{blog.timestamp * 1000 | date:'MMMM d, y' : 'UTC'}}</time>
         <p class="summary" ng-bind-html="blog.body | words:25"></p>
       </a>
     </section>
