@@ -1,50 +1,60 @@
 'use strict';
 
 angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', 'ngSanitize', 'truncate'])
-  .config(function ($routeProvider, $locationProvider) {
-
+  .config(function ($routeProvider) {
 
     $routeProvider
       .when('/', {
-        templateUrl: 'app/views/home.html'
+        templateUrl: 'app/views/home.html',
+        title: 'Home'
       })
       .when('/portfolio', {
         templateUrl: 'app/views/portfolio.html',
-        controller: 'portfolioController'
+        controller: 'portfolioController',
+        title: 'Portfolio'
       })
       .when('/blog', {
         templateUrl: 'app/views/blog.html',
-        controller: 'blogController'
+        controller: 'blogController',
+        title: 'Blog'
       })
       .when('/blog/:posts', {
         templateUrl: 'app/views/entry.html',
         controller: 'blogController',
+        /*resolve: {
+          posts: function(posts, $route){
+            return posts.all;
+          }
+        }*/
+        title: 'Blog Post'
       })
       .otherwise({
         redirectTo: '/'
       });
+
   })
 
+  .factory('posts', function ($resource){
+    return $resource('http://api.tumblr.com/v2/blog/sceendy.tumblr.com/posts/text?callback=JSON_CALLBACK&api_key=' + '2haT0E7GSPnvgRp58tts2EmlBiQXqGdL6opaBs9eO09aA9JQQ3');
+  })
+
+  .controller('appController', function($rootScope){
+    $rootScope.$on("$routeChangeSuccess", function(event, current, previous) {
+      $rootScope.title = current.title;
+    });
+  })
   // BLOG Controller
-  .controller('blogController', function ($scope, $http, $resource, $sce) {
-
-    var blog_url = "sceendy.tumblr.com";
-    var api_key ="2haT0E7GSPnvgRp58tts2EmlBiQXqGdL6opaBs9eO09aA9JQQ3";
-    var url = "http://api.tumblr.com/v2/blog/"+blog_url+"/posts/text?api_key="+api_key+'&limit=20';
-    var _resource = $resource(url, {callback: '@jsonp'}, {
-      test: {method: 'JSONP', params: {jsonp: 'JSON_CALLBACK'}}
-    });
-
-    // let's make sure it's working, just testing
-    _resource.test(function(data, $sce){
-      console.log('Tumblr status = '+ data.meta.status + ', msg = ' + data.meta.msg + ' for ' + data.response.blog.title);
-      $scope.blog = data.response.posts;
-      $scope.blog.totalCount = data.response.blog.total_count; // eh, let's call in 'blog' for now
-    });
+  .controller('blogController', function ($scope, $http, $resource){
+    $http.jsonp('http://api.tumblr.com/v2/blog/sceendy.tumblr.com/posts/text?callback=JSON_CALLBACK&api_key=' + '2haT0E7GSPnvgRp58tts2EmlBiQXqGdL6opaBs9eO09aA9JQQ3')
+      .success(function(data, status, headers, config){
+        $scope.blog = data.response.posts;
+        $scope.blog.totalCount = data.response.blog.total_count; // eh, let's call in 'blog' for now
+      }
+    );
   })
 
   // PORTFOLIO Controller
-
+  //todo add Image preview
   .controller('portfolioController', function ($scope) {
     $scope.workItem = [
     {

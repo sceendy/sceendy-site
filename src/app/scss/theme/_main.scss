@@ -42,9 +42,10 @@ time {
 code {
   background: #eee;
   border-radius: 2px;
-  padding: 2px 5px;
+  padding: 15px;
   border: #E5E5E5 solid 1px;
   font-size:12px;
+  display:block;
 }
 
 .fa-heart {
@@ -69,4 +70,12 @@ article[class^="component"] {
     text-decoration:none;
     background:#eee;
   }
+  .summary {
+    color:#333;
+  }
+}
+
+.heading-blue-border {
+  border-top: 3px solid $main-blue;
+  padding-top: 15px;
 }
