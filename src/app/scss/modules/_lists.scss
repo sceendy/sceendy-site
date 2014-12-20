@@ -10,7 +10,6 @@
     color:#000;
   }
   p.summary {
-    padding-right: 35px;
     margin-top: 5px;
     &:before {
       content: 'Summary: ';
@@ -22,14 +21,14 @@
 
 .tags {
   display: inline-block;
-  background: #eee;
-  margin: 5px 2px;
-  padding: 3px 5px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
   font-size: .6em;
   line-height:14px;
+  background: #eee;
+  margin: 10px 4px 3px 0;
+  padding: 3px 5px;
   border: #e0e0e0 1px solid;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   &:before {
     content: '\f111';
     font-family:'FontAwesome';

@@ -11,7 +11,7 @@
   <div class="row">
     <section class="col-md-12">
       <h2>{{blog.title}}</h2>
-      <time>{{blog.timestamp * 1000 | date:'MMMM d, y' : 'UTC'}}</time>
+      <time>{{blog.timestamp * 1000 | date:'MMMM d, y ' + '@ h:mm a' }}</time>
       <p class="summary" ng-bind-html="blog.body"></p>
       <p class="text-center" ng-show="blog.totalCount">
         <button ng-click="previousPost()" class="btn btn-pink"><i class="fa fa-chevron-circle-left"></i> Previous Post</button>

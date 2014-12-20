@@ -73,7 +73,7 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
       client:'Stage Stores',
       url: 'www.stagestores.com/store/account/findyourstore.jsp',
       skills: ['HTML/CSS', 'PHP'],
-      summary: 'Did regular maintenance on their previous website. Wrote the frontend code for the current store locator.'
+      summary: 'Primarily handled regular maintenance on their website. Developed the UI for their store locator and worked with the backend developer to GET data.'
     },
     {
       client:'Joinem',
@@ -91,7 +91,7 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
       client:'KHYI 95.3FM',
       url: 'www.khyi.com',
       skills: ['HTML/CSS', 'PHP', 'JS'],
-      summary: 'Customized a WordPress theme, installed plugins, improved layout/accessibilty, and better web presence. '
+      summary: 'Customized a purchased WordPress theme, installed/customized plugins, improved layout/accessibilty, and helped increase traffic to their website. '
     },
     {
       client:'Extraco Banks',
@@ -115,7 +115,7 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
       client:'TX Concussion Partnership',
       url: 'www.txconcussionlaw.com',
       skills: ['HTML/SCSS', 'JS', 'Angular', 'PHP'],
-      summary: 'Designed and developed custom WordPress theme. Managing content.'
+      summary: 'Designed and developed custom WordPress theme, perform bi-weekly maintenance, and currently working on building a doctor-locating tool.'
     }
     ];
   })

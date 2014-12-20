@@ -1,5 +1,6 @@
 footer {
   background: #f1f1f1;
+  border-top: #d4d4d4 2px solid;
   margin-top: 15px;
   bottom: 0;
   position: absolute;
@@ -12,4 +13,9 @@ footer {
     font-size:11px;
   }
 
+}
+
+.blog-footer{
+  color:$main-pink;
+  font-size:.8em;
 }
