@@ -18,14 +18,9 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
         controller: 'blogController',
         title: 'Blog'
       })
-      .when('/blog/:posts', {
+      .when('/blog/:slug', {
         templateUrl: 'app/views/entry.html',
         controller: 'blogController',
-        /*resolve: {
-          posts: function(posts, $route){
-            return posts.all;
-          }
-        }*/
         title: 'Blog Post'
       })
       .otherwise({
@@ -44,7 +39,7 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
     });
   })
   // BLOG Controller
-  .controller('blogController', function ($scope, $http, $resource){
+  .controller('blogController', function ($scope, $http, $resource, posts){
     $http.jsonp('http://api.tumblr.com/v2/blog/sceendy.tumblr.com/posts/text?callback=JSON_CALLBACK&api_key=' + '2haT0E7GSPnvgRp58tts2EmlBiQXqGdL6opaBs9eO09aA9JQQ3')
       .success(function(data, status, headers, config){
         $scope.blog = data.response.posts;
