@@ -20,6 +20,11 @@ time {
   text-align:center;
 }
 
+.block-center {
+  display:block;
+  margin:0 auto;
+}
+
 .sm-hide {
   @media screen and (max-width:740px){
     display:none;
