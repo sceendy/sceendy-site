@@ -9,11 +9,11 @@
     </header>
   </div>
   <div class="row">
-    <section ng-repeat="blog in blog" class="col-md-6">
-      <a class="blog-entry" ng-href="/#/blog/{{blog.slug}}">
-        <h4>{{blog.title}}</h4>
-        <time>{{blog.timestamp * 1000 | date:'MMMM d, y' : 'UTC'}}</time>
-        <p class="summary" ng-bind-html="blog.body | words:25"></p>
+    <section ng-repeat="(key, post) in posts.items" class="col-md-6">
+      <a class="blog-entry"  ng-href="/#/blog/{{ key }}">
+        <h4>{{posts.items[key].title}}</h4>
+        <time>{{posts.items[key].published | date:'MMMM d, y' : 'UTC'}}</time>
+        <p class="summary" ng-bind-html="posts.items[key].content | words:25"></p>
       </a>
     </section>
   </div>

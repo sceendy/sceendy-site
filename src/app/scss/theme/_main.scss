@@ -66,12 +66,16 @@ article[class^="component"] {
 .blog-entry {
   padding:10px 15px;
   margin-bottom:5px;
+  display:block;
   &:hover {
     text-decoration:none;
     background:#eee;
   }
   .summary {
     color:#333;
+    br {
+      line-height: 35px;
+    }
   }
 }
 

@@ -33,11 +33,11 @@
     <header class="col-md-12 col-xs-12 component-heading">
       <h3>Blog</h3>
     </header>
-    <div class="col-md-6" ng-repeat="blog in blog | limitTo: 4">
-      <a class="blog-entry" ng-href="/#/blog/{{blog.slug}}">
-        <h4>{{blog.title}}</h4>
-        <time>{{blog.timestamp * 1000 | date:'MMMM d, y ' + '@ h:mm a' }}</time>
-        <p class="summary" ng-bind-html="blog.body | words:25"></p>
+    <div class="col-md-6" ng-repeat="(key, post) in posts.items  | limitTo: 4">
+      <a class="blog-entry" ng-href="/#/blog/{{ key }}">
+        <h4>{{posts.items[key].title}}</h4>
+        <time>{{posts.items[key].published | date:'MMMM d, y ' + '@ h:mm a' }}</time>
+        <p class="summary" ng-bind-html="posts.items[key].content  | words:25"></p>
       </a>
     </div>
   </div>

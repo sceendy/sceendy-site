@@ -18,7 +18,7 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
         controller: 'blogController',
         title: 'Blog'
       })
-      .when('/blog/:slug', {
+      .when('/blog/:id', {
         templateUrl: 'app/views/entry.html',
         controller: 'blogController',
         title: 'Blog Post'
@@ -29,23 +29,31 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
 
   })
 
-  .factory('posts', function ($resource){
-    return $resource('http://api.tumblr.com/v2/blog/sceendy.tumblr.com/posts/text?callback=JSON_CALLBACK&api_key=' + '2haT0E7GSPnvgRp58tts2EmlBiQXqGdL6opaBs9eO09aA9JQQ3');
+  // BLOG Factory
+  .factory('Blog',function($resource){
+      return $resource(
+        'https://www.googleapis.com/blogger/v3/blogs/5718631717220089292/posts?key=AIzaSyCqUv0mNrHN0cEB7gwqiWC0A0rs71lpwgE',
+        {},
+      {
+        query: {
+          method: 'GET',
+          isArray: false
+        }
+      }
+    );
   })
 
+  // APP Controller
   .controller('appController', function($rootScope){
     $rootScope.$on("$routeChangeSuccess", function(event, current, previous) {
       $rootScope.title = current.title;
     });
   })
+
   // BLOG Controller
-  .controller('blogController', function ($scope, $http, $resource, posts){
-    $http.jsonp('http://api.tumblr.com/v2/blog/sceendy.tumblr.com/posts/text?callback=JSON_CALLBACK&api_key=' + '2haT0E7GSPnvgRp58tts2EmlBiQXqGdL6opaBs9eO09aA9JQQ3')
-      .success(function(data, status, headers, config){
-        $scope.blog = data.response.posts;
-        $scope.blog.totalCount = data.response.blog.total_count; // eh, let's call in 'blog' for now
-      }
-    );
+  .controller('blogController', function($scope, $routeParams, Blog) {
+    $scope.posts = Blog.get({id:$routeParams.id});
+    $scope.key = $routeParams.id;
   })
 
   // PORTFOLIO Controller

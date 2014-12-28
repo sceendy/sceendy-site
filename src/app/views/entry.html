@@ -1,22 +1,18 @@
-<article class="component-entry" ng-repeat="blog in blog" ng-show="$first">
+<article class="component-entry">
   <div class="row">
     <header class="col-md-12 col-xs-12">
       <ul class="breadcrumb">
         <li><a href="/#/">home</a> &gt; </li>
         <li><a href="/#/blog">Blog</a>  &gt; </li>
-        <li>{{blog.title}}</li>
+        <li>{{posts.items[key].title}}</li>
       </ul>
     </header>
   </div>
   <div class="row">
     <section class="col-md-12">
-      <h2>{{blog.title}}</h2>
-      <time>{{blog.timestamp * 1000 | date:'MMMM d, y ' + '@ h:mm a' }}</time>
-      <p class="summary" ng-bind-html="blog.body"></p>
-      <p class="text-center" ng-show="blog.totalCount">
-        <button ng-click="previousPost()" class="btn btn-pink"><i class="fa fa-chevron-circle-left"></i> Previous Post</button>
-        <button ng-click="nextPost()" class="btn btn-pink"> Next Post<i class="fa fa-chevron-circle-right"></i></button>
-      </p>
+      <h2>{{posts.items[key].title}}</h2>
+      <time>{{posts.items[key].published | date:'MMMM d, y ' + '@ h:mm a' }}</time>
+      <p class="summary" ng-bind-html="posts.items[key].content"></p>
       <h5 class="text-center heading-blue-border">Have a question or comment?<br/>Ask me anything: <a href="http://twitter.com/home?status=@sceendy">@sceendy</a></h5>
     </section>
   </div>
