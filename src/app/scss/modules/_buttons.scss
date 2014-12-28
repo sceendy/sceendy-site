@@ -34,9 +34,21 @@
   text-shadow: darken($main-blue, 10%) 1px 0px 4px;
   margin:0 3px;
   &:hover {
-    background:$link-hover;
     text-shadow:none;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    background:$link-hover;
+    -webkit-animation-name: spinnerRotate;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spinnerRotate;
+    -moz-animation-duration: 2s;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spinnerRotate;
+    -ms-animation-duration: 2s;
+    -ms-animation-iteration-count: 1;
+    -ms-animation-timing-function: linear;
   }
   .fa {
     display:inline-block;
