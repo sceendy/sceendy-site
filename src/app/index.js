@@ -51,9 +51,14 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
   })
 
   // BLOG Controller
-  .controller('blogController', function($scope, $routeParams, Blog) {
+  .controller('blogController', function($scope, $routeParams, Blog,$sce) {
     $scope.posts = Blog.get({id:$routeParams.id});
     $scope.key = $routeParams.id;
+
+    $scope.blogContent = function() {
+      return $sce.trustAsHtml($scope.posts.items[$scope.key].content);
+    };
+
   })
 
   // PORTFOLIO Controller
