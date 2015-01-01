@@ -17,6 +17,7 @@ html, body {
   margin:0;
   color:$darkgray;
   font-family: 'Source Sans Pro', sans-serif;
+  font-size:15px;
 }
 html {
   height:100%;
@@ -53,12 +54,18 @@ h4, .h4 {
   margin-top:8px;
 }
 
+blockquote {
+  font-size: 16px;
+  font-style: italic;
+  color: #818181;
+  padding: 15px;
+  border-left: #d4d4d4 2px solid;
+}
 .heading-gray {
   color:$main-gray;
 }
 
 p {
-  font-size:14px;
   color:#4F4F4F;
 }
 
