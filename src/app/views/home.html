@@ -44,6 +44,12 @@
         <p class="summary" ng-bind-html="posts.items[key].content  | words:25"></p>
       </a>
     </div>
+
+    <div class="col-md-6 block-center" ng-if="!post.items.length%2">
+      <a href="/#/blog" class="blog-block">
+        View older posts...
+      </a>
+    </div>
+
   </div>
-  <a href="/#/blog" ng-if="blog.totalCount" class="btn btn-pink text-center">Check out other posts... </a>
 </article>

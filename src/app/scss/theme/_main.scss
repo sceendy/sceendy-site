@@ -84,6 +84,18 @@ article[class^="component"] {
   }
 }
 
+.blog-block {
+  display:block;
+  max-width:100%;
+  color:$main-pink;
+  padding:30px 15px;
+  text-align:center;
+  margin-top:30px;
+  &:hover {
+    text-decoration:none;
+  }
+}
+
 .heading-blue-border {
   border-top: 3px solid $main-blue;
   padding-top: 15px;
