@@ -30,9 +30,11 @@
 </section>
 <article ng-controller="blogController" class="component-portfolio">
   <div class="row">
-    <header class="col-md-12 col-xs-12 component-heading">
-      <h3>Blog</h3>
-    </header>
+    <div class="col-md-12 col-xs-12">
+      <header class="component-heading">
+        <h3>Blog</h3>
+      </header>
+    </div>
     <!-- hey, API stuff loading? good show me! -->
     <div class="col-md-12" ng-hide="posts.$resolved"><img src="/assets/images/spinner.gif" class="block-center"/></div>
 
