@@ -26,7 +26,6 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
       .otherwise({
         redirectTo: '/'
       });
-
   })
 
   // BLOG Factory
@@ -44,10 +43,11 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
   })
 
   // APP Controller
-  .controller('appController', function($rootScope){
+  .controller('appController', function($rootScope, $scope){
     $rootScope.$on("$routeChangeSuccess", function(event, current, previous) {
       $rootScope.title = current.title;
     });
+    $scope.currentYear = (new Date().getFullYear());
   })
 
   // BLOG Controller
@@ -126,5 +126,4 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
       summary: 'Designed and developed custom WordPress theme, perform bi-weekly maintenance, and currently working on building a doctor-locating tool.'
     }
     ];
-  })
-;
+  });
