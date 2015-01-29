@@ -69,7 +69,7 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
       client:'Studio Movie Grill',
       url: 'ticketdeals.studiomoviegrill.com/',
       skills: ['HTML/CSS', 'PHP'],
-      summary: 'I made this mini-site for the $5 ticket deals that SMG provides along with a backend developer that made the database where the deals were stored.'
+      summary: 'I built the user interface for this Studio Movie Grill micro-site that serves as a way for movie-goers to snag some sweet $5 ticket deals for select movies.'
     },
     {
       client:'Visionworks',
@@ -81,13 +81,13 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
       client:'Stage Stores',
       url: 'www.stagestores.com/store/account/findyourstore.jsp',
       skills: ['HTML/CSS', 'PHP'],
-      summary: 'Primarily handled regular maintenance on their website. Developed the UI for their store locator and worked with the backend developer to GET data.'
+      summary: 'Primarily handled regular maintenance on the Stage Stores website. Developed the interface for their store locator.'
     },
     {
       client:'Joinem',
       url: 'www.joinem.com',
       skills: ['HTML/SCSS', 'Angular', 'jQuery'],
-      summary: 'Currently, part of the UI team creating the Joinem website which is an single page app. We also use Grunt/Bower/Git.'
+      summary: 'Currently, part of the UI team creating the Joinem website which is an single page app using Angular. I also designed/developed the mobile version.'
     },
     {
       client:'Wingstop',
@@ -99,7 +99,7 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
       client:'KHYI 95.3FM',
       url: 'www.khyi.com',
       skills: ['HTML/CSS', 'PHP', 'JS'],
-      summary: 'Customized a purchased WordPress theme, installed/customized plugins, improved layout/accessibilty, and helped increase traffic to their website. '
+      summary: 'Customized a WordPress theme, customized plugins, improved layout/accessibilty, and helped increase traffic to their website. '
     },
     {
       client:'Extraco Banks',
@@ -117,13 +117,13 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
       client:'TSATA',
       url: 'www.tsata.com',
       skills: ['HTML/LESS', 'JS','PHP'],
-      summary: 'Custom WordPress theme development, design, and updates. Customized a job manager plugin to suit their needs.'
+      summary: 'Coded up a sweet custom theme for their WordPress site. Customized a job manager plugin to suit their needs. I continue to do regular maintenance.'
     },
     {
       client:'TX Concussion Partnership',
       url: 'www.txconcussionlaw.com',
       skills: ['HTML/SCSS', 'JS', 'Angular', 'PHP'],
-      summary: 'Designed and developed custom WordPress theme, perform bi-weekly maintenance, and currently working on building a doctor-locating tool.'
+      summary: 'Designed and developed custom WordPress theme, perform bi-weekly maintenance, and currently working on developing a WP plugin for the site.'
     }
     ];
   });
