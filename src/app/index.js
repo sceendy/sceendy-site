@@ -69,7 +69,7 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
       client:'Studio Movie Grill',
       url: 'ticketdeals.studiomoviegrill.com/',
       skills: ['HTML/CSS', 'PHP'],
-      summary: 'I built the user interface for this Studio Movie Grill micro-site that serves as a way for movie-goers to snag some sweet $5 ticket deals for select movies.'
+      summary: 'Studio Movie Grill has $5 ticket deals that were initially only available on Facebook but I built a micro-site for them that made them available that didn\'t require movie goers to have a Facebook account.'
     },
     {
       client:'Visionworks',
@@ -81,19 +81,19 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
       client:'Stage Stores',
       url: 'www.stagestores.com/store/account/findyourstore.jsp',
       skills: ['HTML/CSS', 'PHP'],
-      summary: 'Primarily handled regular maintenance on the Stage Stores website. Developed the interface for their store locator.'
+      summary: 'While at Apollo Interactive, I handled the maintenance on the Stage Stores website and developed the interface for their store locator.'
     },
     {
       client:'Joinem',
       url: 'www.joinem.com',
       skills: ['HTML/SCSS', 'Angular', 'jQuery'],
-      summary: 'Currently, part of the UI team creating the Joinem website which is an single page app using Angular. I also designed/developed the mobile version.'
+      summary: 'I am part of the UI team creating the Joinem website which is a single page app using Angular. I also designed the mobile menu.'
     },
     {
       client:'Wingstop',
       url: 'www.wingstop.com',
       skills: ['HTML/CSS', 'PHP'],
-      summary: 'Performed front-end maintenance for Wingstop website along with improvements throughout the site including the Franchise pages.'
+      summary: 'While at Apollo Interactive, I performed front-end maintenance for Wingstop website along with improvements throughout the site including the Franchise pages.'
     },
     {
       client:'KHYI 95.3FM',
@@ -105,13 +105,13 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
       client:'Extraco Banks',
       url: 'www.extracobanks.com/rewards/',
       skills: ['HTML/CSS', 'Angular', 'jQuery'],
-      summary: 'Built the frontend of the Extraco Rewards page for users to quickly find where they can shop to get Rewards. Also created the Contact Us modal.'
+      summary: 'While at Apollo Interactive, I built the frontend of the Extraco Rewards page for users to quickly find where they can shop to get Rewards. Also created the Contact Us modal.'
     },
     {
       client:'Curves',
       url: 'french.curves.com',
       skills: ['HTML/CSS', 'PHP'],
-      summary: 'Maintained and created new pages for the international Curves websites that included Australia, New Zealand, France, and the UK.'
+      summary: 'While at Apollo Interactive, I maintained and created new pages for the international Curves websites that included Australia, New Zealand, France, and the UK.'
     },
     {
       client:'TSATA',
