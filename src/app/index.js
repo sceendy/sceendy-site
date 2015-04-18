@@ -23,12 +23,13 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
         controller: 'blogController',
         title: 'Blog Post'
       })
+      // todo add 404 page later
       .otherwise({
         redirectTo: '/'
       });
   })
 
-  // BLOG Factory
+  // BLOG Factory: accesses the API and returns the blog data to be used
   .factory('Blog',function($resource){
       return $resource(
         'https://www.googleapis.com/blogger/v3/blogs/5718631717220089292/posts?key=AIzaSyCqUv0mNrHN0cEB7gwqiWC0A0rs71lpwgE',
@@ -42,7 +43,7 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
     );
   })
 
-  // APP Controller
+  // APP Controller: allows for dynamic title and generates current year for footer
   .controller('appController', function($rootScope, $scope){
     $rootScope.$on("$routeChangeSuccess", function(event, current, previous) {
       $rootScope.title = current.title;
@@ -50,8 +51,8 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
     $scope.currentYear = (new Date().getFullYear());
   })
 
-  // BLOG Controller
-  .controller('blogController', function($scope, $routeParams, Blog,$sce) {
+  // BLOG Controller: assigns blog data some values
+  .controller('blogController', function($scope, $routeParams, Blog, $sce) {
     $scope.posts = Blog.get({id:$routeParams.id});
     $scope.key = $routeParams.id;
 
@@ -62,7 +63,7 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
   })
 
   // PORTFOLIO Controller
-  //todo add Image preview
+  // todo add Image preview per item
   .controller('portfolioController', function ($scope) {
     $scope.workItem = [
     {
@@ -87,7 +88,7 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
       client:'Joinem',
       url: 'www.joinem.com',
       skills: ['HTML/SCSS', 'Angular', 'jQuery'],
-      summary: 'I am part of the UI team creating the Joinem website which is a single page app using Angular. I also designed the mobile menu.'
+      summary: 'Joinem is a single page application built using Angular. I made some contributions to the design as well.'
     },
     {
       client:'Wingstop',
