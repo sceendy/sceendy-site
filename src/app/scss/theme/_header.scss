@@ -4,9 +4,6 @@ img.profile {
   border-radius: 50%;
   margin: 0 auto;
   display: block;
-  margin-top: 15px;
-  width: 120px;
-  @media screen and (max-width:867px){
-    display:none;
-  }
+  margin-top: 10px;
+  width: 100px;
 }

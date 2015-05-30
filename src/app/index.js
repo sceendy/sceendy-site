@@ -8,10 +8,10 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
         templateUrl: 'app/views/home.html',
         title: 'Home'
       })
-      .when('/portfolio', {
-        templateUrl: 'app/views/portfolio.html',
-        controller: 'portfolioController',
-        title: 'Portfolio'
+      .when('/work', {
+        templateUrl: 'app/views/work.html',
+        controller: 'workController',
+        title: 'Work'
       })
       .when('/blog', {
         templateUrl: 'app/views/blog.html',
@@ -62,9 +62,9 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
 
   })
 
-  // PORTFOLIO Controller
+  // WORK Controller
   // todo add Image preview per item
-  .controller('portfolioController', function ($scope) {
+  .controller('workController', function ($scope) {
     $scope.workItem = [
     {
       client:'Studio Movie Grill',

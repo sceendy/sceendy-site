@@ -3,28 +3,24 @@
     <header class="component-heading">
       <h3>about me</h3>
     </header>
-    <p class="indent">Pixel by pixel, I build beautiful web experiences. I have a BA in Emerging Media and Communication along with some serious<i class="fa fa-heart"></i>for the internet. With a background in design, I use modern client-side code to create awesome browser/device agnostic interactions.</p>
+    <p class="indent">Pixel by pixel, I build beautiful web experiences -- remotely. I have a BA in Emerging Media and Communication along with some serious<i class="fa fa-heart"></i>for the internet. With a background in design, I use modern client-side code to create awesome browser/device agnostic interactions.</p>
     <p class="indent">I am currently coding at a social ecommerce startup called <a href="https://joinem.com" target="_blank">Joinem</a>. <br/>I am <strong>available</strong> for freelance or contract work at this time.
     </p>
     <p>
       <a href="http://sceendy.com/assets/pdf/resume-web.pdf" target="_blank" class="btn btn-blue">resume.pdf | 145kb</a><a href="http://github.com/sceendy" class="btn btn-blue" target="_blank">github code</a>
     </p>
   </div>
-  <div class="col-md-5 col-xs-12" ng-controller="portfolioController">
+  <div class="col-md-5 col-xs-12" ng-controller="workController">
     <header class="component-heading">
       <h3>currently working on</h3>
     </header>
-    <a ng-href="http://{{workItem[3].url}}" class="work" target="_blank">
-      <section>
-        <h4>{{workItem[3].client}}</h4>
-        <div class="tags" ng-repeat="tag in workItem[3].skills">{{tag}}</div>
-        <p class="summary">
-          {{workItem[3].summary}}
-        </p>
-      </section>
+    <a ng-href="http://{{workItem[3].url}}" target="_blank">
+      <aside class="sidebar">
+        <h4 class="sidebar--heading">{{workItem[3].client}}</h4>
+      </aside>
     </a>
     <p class="text-center">
-      <a class="btn btn-pink text-center" href="/#/portfolio">view my portfolio</a>
+      <a class="btn btn-pink text-center" href="/#/work">view my work</a>
     </p>
   </div>
 </section>
@@ -39,15 +35,14 @@
     <div class="col-md-12" ng-hide="posts.$resolved"><img src="/assets/images/spinner.gif" class="block-center"/></div>
 
     <!-- API data pulled in? cool! -->
-    <div class="col-md-6" ng-repeat="(key, post) in posts.items  | limitTo: 4">
+    <div class="col-md-4 col-xs-12" ng-repeat="(key, post) in posts.items">
       <a class="blog-entry" ng-href="/#/blog/{{ key }}">
         <h4>{{posts.items[key].title}}</h4>
         <time>{{posts.items[key].published | date:'MMMM d, y ' + '@ h:mm a' }}</time>
-        <p class="summary" ng-bind-html="posts.items[key].content  | words:25"></p>
       </a>
     </div>
 
-    <div class="col-md-6 block-center" ng-if="!post.items.length%2">
+    <div class="col-md-4 col-xs-12 block-center" ng-if="!post.items.length%2 == 0">
       <a href="/#/blog" class="blog-block">
         View older posts...
       </a>

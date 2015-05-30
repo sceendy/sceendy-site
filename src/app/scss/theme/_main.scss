@@ -55,8 +55,8 @@ code {
 }
 
 .fa-heart {
-  color:$main-pink;
-  margin:0 3px;
+  color: $main-pink;
+  margin: 0 3px;
 }
 
 article[class^="component"] {
@@ -64,21 +64,21 @@ article[class^="component"] {
 }
 
 .component-heading {
-  border-bottom:2px solid;
-  color:$main-pink;
-  margin-bottom:15px;
+  color: #767676;
+  border-bottom: 2px #eee solid;
+  padding-left: 0;
 }
 
 .blog-entry {
-  padding:10px 15px;
-  margin-bottom:5px;
-  display:block;
+  padding: 10px 15px;
+  margin-bottom: 5px;
+  display: inline-block;
   &:hover {
-    text-decoration:none;
-    background:#eee;
+    text-decoration: none;
+    background: #eee;
   }
   .summary {
-    color:#333;
+    color: #333;
     br {
       line-height: 35px;
     }
@@ -86,13 +86,13 @@ article[class^="component"] {
 }
 
 .blog-block {
-  display:block;
-  max-width:100%;
-  color:$main-pink;
+  display: block;
+  max-width: 100%;
+  color: $main-pink;
   padding: 15px 15px 0;
-  text-align:center;
+  text-align: center;
   &:hover {
-    text-decoration:none;
+    text-decoration: none;
   }
 }
 
@@ -100,4 +100,18 @@ article[class^="component"] {
   border-top: 3px solid $main-blue;
   padding-top: 15px;
   font-size: 17px;
+}
+
+
+.sidebar {
+  background-image: url('http://cdn.stashhh.me/stashboxes/lids/000/000/561/large/iphone-joinem.jpg?1418150524');
+  background-size: cover;
+}
+
+.sidebar--heading {
+  text-align: center;
+  padding: 53px 0;
+  font-size: 40px;
+  color: #fff;
+  text-shadow: #555 2px 1px 3px;
 }
