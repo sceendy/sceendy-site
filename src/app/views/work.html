@@ -6,6 +6,7 @@
   </div>
   <div class="row">
     <a ng-repeat="work in workItem" ng-href="http://{{work.url}}" class="col-sm-6 work" target="_blank">
+      <img ng-src="{{work.image}}" alt="{{work.client}}"/>
       <section>
         <h4>{{work.client}}</h4>
         <div class="tags" ng-repeat="tag in work.skills">{{tag}}</div>

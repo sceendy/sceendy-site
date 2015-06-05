@@ -5,9 +5,11 @@
   color:#000;
   &:hover {
     cursor: pointer;
-    background: $lightgray;
     text-decoration: none;
     color: #000;
+    box-shadow: $lightgray 1px 0px 10px 2px;
+    -webkit-transition: box-shadow 1s;
+    transition: box-shadow 1s;
   }
   p.summary {
     margin-top: 5px;
@@ -22,11 +24,12 @@
 .tags {
   display: inline-block;
   font-size: 0.6em;
+  color: #fff;
   line-height: 14px;
-  background-color: $lightgray;
+  background-color: $main-pink;
   margin: 10px 4px 3px 0;
   padding: 3px 5px;
-  border:  1px solid $gray;
+  border:  1px solid darken($main-pink, 10%);
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   &:before {
@@ -75,10 +78,10 @@
     font-weight: 700;
     border-bottom: 2px #fff solid;
     text-decoration: none;
-    color: $gray;
+    color: $main-blue;
     &:hover {
-      background: $lightgray;
-      border-bottom: 2px $gray solid;
+      border-bottom: 2px darken($main-pink, 10%) solid;
+      color: $link-hover;
     }
   }
 }
