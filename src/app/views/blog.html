@@ -7,8 +7,9 @@
   <div class="row">
     <a class="blog-entry col-md-6"   ng-repeat="(key, post) in posts.items" ng-href="/#/blog/{{ key }}">
       <h4>{{posts.items[key].title}}</h4>
-      <time>{{posts.items[key].published | date:'MMMM d, y' : 'UTC'}}</time>
+      <time class="small">{{posts.items[key].published | date:'MMMM d, y' : 'UTC'}}</time>
       <p class="summary" ng-bind-html="posts.items[key].content | words:25"></p>
+      <small><strong>related to:</strong> <span ng-repeat="label in posts.items[key].labels">{{ label }}<span ng-if="!$last"> + </span></span></small>
     </a>
   </div>
 </article>

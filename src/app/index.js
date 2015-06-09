@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', 'ngSanitize', 'truncate'])
-  .config(function ($routeProvider) {
+  .config(function($routeProvider) {
 
     $routeProvider
       .when('/', {
@@ -23,6 +23,7 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
         controller: 'blogController',
         title: 'Blog Post'
       })
+
       // todo add 404 page later
       .otherwise({
         redirectTo: '/'
@@ -30,24 +31,23 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
   })
 
   // BLOG Factory: accesses the API and returns the blog data to be used
-  .factory('Blog',function($resource){
-      return $resource(
-        'https://www.googleapis.com/blogger/v3/blogs/5718631717220089292/posts?key=AIzaSyCqUv0mNrHN0cEB7gwqiWC0A0rs71lpwgE',
-        {},
-      {
-        query: {
-          method: 'GET',
-          isArray: false
-        }
+  .factory('Blog', function($resource) {
+    return $resource(
+      'https://www.googleapis.com/blogger/v3/blogs/5718631717220089292/posts?key=AIzaSyCqUv0mNrHN0cEB7gwqiWC0A0rs71lpwgE',
+    {
+      query: {
+        method: 'GET',
+        isArray: false
       }
-    );
+    });
   })
 
   // APP Controller: allows for dynamic title and generates current year for footer
-  .controller('appController', function($rootScope, $scope){
-    $rootScope.$on("$routeChangeSuccess", function(event, current, previous) {
+  .controller('appController', function($rootScope, $scope) {
+    $rootScope.$on('$routeChangeSuccess', function(event, current) {
       $rootScope.title = current.title;
     });
+
     $scope.currentYear = (new Date().getFullYear());
   })
 
@@ -63,8 +63,7 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
   })
 
   // WORK Controller
-  // todo add Image preview per item
-  .controller('workController', function ($scope) {
+  .controller('workController', function($scope) {
     $scope.workItem = [
     {
       client:'Joinem',
@@ -72,6 +71,27 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
       image: '/assets/images/work/joinem.png',
       skills: ['HTML/SCSS', 'Angular', 'jQuery'],
       summary: 'Joinem is a single page application built using Angular. I made some contributions to the design as well.'
+    },
+    {
+      client:'Extraco Banks',
+      url: 'www.extracobanks.com/rewards/',
+      image: '/assets/images/work/extraco.png',
+      skills: ['HTML/CSS', 'Angular', 'jQuery'],
+      summary: 'While at Apollo Interactive, I built the frontend of the Extraco Rewards page for users to quickly find where they can shop to get Rewards. Also created the Contact Us modal.'
+    },
+    {
+      client:'TSATA',
+      url: 'www.tsata.com',
+      image: '/assets/images/work/tsata.png',
+      skills: ['HTML/LESS', 'JS','PHP'],
+      summary: 'Coded up a sweet custom theme for their WordPress site. Customized a job manager plugin to suit their needs. I continue to do regular maintenance.'
+    },
+    {
+      client:'TX Concussion Partnership',
+      url: 'www.txconcussionlaw.com',
+      image: '/assets/images/work/tscp.png',
+      skills: ['HTML/SCSS', 'JS', 'Angular', 'PHP'],
+      summary: 'Designed and developed custom WordPress theme, perform bi-weekly maintenance, and currently working on developing a WP plugin for the site.'
     },
     {
       client:'Studio Movie Grill',
@@ -109,32 +129,11 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
       summary: 'Customized a WordPress theme, customized plugins, improved layout/accessibilty, and helped increase traffic to their website. '
     },
     {
-      client:'Extraco Banks',
-      url: 'www.extracobanks.com/rewards/',
-      image: '/assets/images/work/extraco.png',
-      skills: ['HTML/CSS', 'Angular', 'jQuery'],
-      summary: 'While at Apollo Interactive, I built the frontend of the Extraco Rewards page for users to quickly find where they can shop to get Rewards. Also created the Contact Us modal.'
-    },
-    {
       client:'Curves',
       url: 'french.curves.com',
       image: '/assets/images/work/curves.png',
       skills: ['HTML/CSS', 'PHP'],
       summary: 'While at Apollo Interactive, I maintained and created new pages for the international Curves websites that included Australia, New Zealand, France, and the UK.'
-    },
-    {
-      client:'TSATA',
-      url: 'www.tsata.com',
-      image: '/assets/images/work/tsata.png',
-      skills: ['HTML/LESS', 'JS','PHP'],
-      summary: 'Coded up a sweet custom theme for their WordPress site. Customized a job manager plugin to suit their needs. I continue to do regular maintenance.'
-    },
-    {
-      client:'TX Concussion Partnership',
-      url: 'www.txconcussionlaw.com',
-      image: '/assets/images/work/tscp.png',
-      skills: ['HTML/SCSS', 'JS', 'Angular', 'PHP'],
-      summary: 'Designed and developed custom WordPress theme, perform bi-weekly maintenance, and currently working on developing a WP plugin for the site.'
     }
     ];
   });

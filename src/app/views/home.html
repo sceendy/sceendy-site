@@ -3,20 +3,20 @@
     <header class="component-heading">
       <h3>about me</h3>
     </header>
-    <p class="indent">Pixel by pixel, I build beautiful web experiences. I have a BA in Emerging Media and Communication along with some serious<i class="fa fa-heart"></i>for the internet. With a background in design, I use modern client-side code to create awesome browser/device agnostic websites.</p>
-    <p class="indent">I am currently coding at a social ecommerce startup called <a href="https://joinem.com" target="_blank">Joinem</a>. <br/>I am <strong>available</strong> for freelance or contract work at this time.
+    <p class="indent">Pixel by pixel, I build beautiful web experiences. I have a BA in Emerging Media and Communication along with some serious<i class="fa fa-heart"></i>for the internet. So, I tend to create awesome + modern web applications. </p>
+    <p class="indent">I am currently coding at a social ecommerce startup called <a href="https://joinem.com" target="_blank">Joinem</a>. <br/>And I am <strong>not available</strong> for freelance or contract work at this time.
     </p>
     <p>
       <a href="http://sceendy.com/assets/pdf/resume-web.pdf" target="_blank" class="btn btn-blue">resume.pdf | 145kb</a><a href="http://github.com/sceendy" class="btn btn-blue" target="_blank">github code</a>
     </p>
   </div>
-  <div class="col-md-5 col-xs-12" ng-controller="workController">
+  <div class="col-md-5 col-xs-12">
     <header class="component-heading">
       <h3>currently working on</h3>
     </header>
-    <a ng-href="http://{{workItem[0].url}}" target="_blank">
+    <a ng-href="https://joinem.com" target="_blank">
       <aside class="sidebar">
-        <h4 class="sidebar--heading">{{workItem[0].client}}</h4>
+        <h4 class="sidebar--heading">Joinem</h4>
       </aside>
     </a>
     <p class="text-center">
@@ -35,10 +35,15 @@
     <div class="col-md-12" ng-hide="posts.$resolved"><img src="/assets/images/spinner.gif" class="block-center"/></div>
 
     <!-- API data pulled in? cool! -->
-    <div class="col-md-4 col-xs-12" ng-repeat="(key, post) in posts.items">
+    <div class="col-md-12 col-xs-12" ng-repeat="(key, post) in posts.items">
       <a class="blog-entry" ng-href="/#/blog/{{ key }}">
-        <h4>{{posts.items[key].title}}</h4>
-        <time>{{posts.items[key].published | date:'MMMM d, y ' + '@ h:mm a' }}</time>
+        <div style="float:left;">
+          <h4>{{ posts.items[key].title }}</h4>
+          <small><strong>topics</strong>: <span ng-repeat="label in posts.items[key].labels">{{ label }}<span ng-if="!$last"> + </span></span></small>
+        </div>
+        <div style="float:right;">
+          <time>{{ posts.items[key].published | date:'MMMM d, y ' + '@ h:mm a' }}</time>
+        </div>
       </a>
     </div>
 

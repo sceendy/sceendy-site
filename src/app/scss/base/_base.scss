@@ -49,14 +49,16 @@ h2 {
 }
 
 h3, .h3 {
+  font-size: 18px;
   padding: 5px 0;
-  text-transform: lowercase;
   margin: 5px 0;
+  text-transform: lowercase;
 }
 
 h4, .h4 {
   margin-bottom: 0;
-  margin-top: 8px;
+  margin-top: 5px;
+  font-size: 16px;
   color: $gray;
 }
 

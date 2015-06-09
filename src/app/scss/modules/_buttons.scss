@@ -16,6 +16,7 @@
 
 .btn-blue {
   background:$main-blue;
+  border:  1px solid darken($main-blue, 10%);
   margin-right:5px;
   padding: 7px 15px;
   &:hover{
@@ -65,6 +66,7 @@
   background:$main-pink;
   margin-right:5px;
   padding: 7px 15px;
+  border:  1px solid darken($main-pink, 10%);
   &:hover{
     background-color:darken($main-pink,10%);
   }
