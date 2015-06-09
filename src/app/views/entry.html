@@ -5,8 +5,8 @@
   </div>
   <div class="row">
     <section class="col-md-12">
-      <h2>{{posts.items[key].title}}</h2>
-      <time>{{posts.items[key].published | date:'MMMM d, y ' + '@ h:mm a' }}</time>
+      <h2 class="blog-title">{{posts.items[key].title}}</h2>
+      <time class="small">{{posts.items[key].published | date:'MMMM d, y ' + '@ h:mm a' }}</time>
       <p class="blog-text" ng-bind-html="blogContent()"></p>
       <h5 class="text-center heading-blue-border">Have a question or comment?<br/>Ask me anything: <a href="http://twitter.com/home?status=@sceendy">@sceendy</a></h5>
     </section>
