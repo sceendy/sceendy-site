@@ -30,10 +30,49 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <div class="container">
-      <div ng-include="'app/views/header.html'"></div>
+
+      <header class="row">
+        <div class="col-md-12 col-xs-12">
+          <div class="text-center">
+            <img src="/assets/images/cindy.jpg" alt="Cindy Juarez" class="profile">
+            <h1>Cindy Juarez</h1>
+            <h2 class="headline">I am a frontend engineer in Dallas, TX.</h2>
+          </div>
+        </div>
+      </header>
+      <div class="row">
+        <nav class="row-md-12 col-xs-12">
+          <ul class="nav">
+            <li><a href="/#/">Home</a></li>
+            <li><a href="/#/work">Work</a></li>
+            <li><a href="/#/blog">Blog</a></li>
+          </ul>
+        </nav>
+      </div>
+
       <div ng-view autoscroll="true"></div>
     </div>
-    <footer ng-include="'app/views/footer.html'"></footer>
+
+    <footer>
+      <div class="container">
+        <div class="row middle-earth">
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <p>
+              <a href="http://github.com/sceendy" target="_blank" class="btn-social"><i class="fa fa-github"></i></a>
+              <a href="http://jsfiddle.net/user/sceendy" target="_blank" class="btn-social"><i class="fa fa-jsfiddle"></i></a>
+              <a href="http://twitter.com/sceendy" target="_blank" class="btn-social"><i class="fa fa-twitter"></i></a>
+              <a href="http://dribbble.com/sceendy" target="_blank" class="btn-social"><i class="fa fa-dribbble"></i></a>
+            </p>
+          </div>
+          <div class="col-md-6 col-sm-6 xs-hide">
+            <p class="text-right">
+              the year is: {{currentYear}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
 
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -58,6 +97,8 @@
 
     <!-- build:js({.tmp,src}) scripts/app.js -->
     <script src="app/index.js"></script>
+    <script src="app/blog/blog.js"></script>
+    <script src="app/work/work.js"></script>
 
     <!-- inject:partials -->
     <!-- angular templates will be automaticaly converted in js and inserted here -->

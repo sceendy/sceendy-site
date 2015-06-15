@@ -1,12 +1,14 @@
 <article class="component-portfolio">
   <div class="row">
-    <header class="col-md-12 col-xs-12 component-heading">
-      <h3>Work</h3>
-    </header>
+    <div class="col-md-12 col-xs-12">
+      <header class="component-heading">
+        <h3>Work</h3>
+      </header>
+    </div>
   </div>
   <div class="row">
-    <a ng-repeat="work in workItem" ng-href="http://{{work.url}}" class="col-sm-6 work" target="_blank">
-      <img ng-src="{{work.image}}" alt="{{work.client}}"/>
+    <a ng-repeat="work in workItem" ng-href="http://{{::work.url}}" class="col-sm-6 work" target="_blank">
+      <img ng-src="{{ ::work.image}}" alt="{{::work.client}}"/>
       <section>
         <h4>{{work.client}}</h4>
         <div class="tags" ng-repeat="tag in work.skills">{{tag}}</div>
