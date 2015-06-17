@@ -4,8 +4,8 @@
 }
 
 time {
-  font-size: 16px;
-  line-height: 50px;
+  font-size: 13px;
+  line-height: 1.2;
   color: #888;
   display: block;
 }
@@ -72,13 +72,13 @@ article[class^="component"] {
 }
 
 .blog-entry {
-  padding: 10px 15px 12px;
+  padding: 10px 10px 12px;
   margin-bottom: 5px;
   display: inline-block;
-  border-left: solid 4px transparent;
+  border-bottom: solid 4px transparent;
   &:hover {
     text-decoration: none;
-    border-left: solid 4px;
+    border-bottom: solid 4px;
     background-color: #f1f1f1;
   }
   .summary {

@@ -35,15 +35,11 @@
     <div class="col-md-12" ng-hide="posts.$resolved"><img src="/assets/images/spinner.gif" class="block-center"/></div>
 
     <!-- API data pulled in? cool! -->
-    <div class="col-md-12 col-xs-12" ng-repeat="(key, post) in posts.items">
+    <div class="col-md-4 col-sm-6 col-xs-12" ng-repeat="(key, post) in posts.items">
       <a class="blog-entry" ng-href="/#/blog/{{ key }}">
-        <div style="float:left;">
           <h4>{{ posts.items[key].title }}</h4>
-          <small><strong>topics</strong>: <span ng-repeat="label in posts.items[key].labels">{{ label }}<span ng-if="!$last"> + </span></span></small>
-        </div>
-        <div style="float:right;">
           <time>{{ posts.items[key].published | date:'MMMM d, y ' + '@ h:mm a' }}</time>
-        </div>
+          <small><strong>topics</strong>: <span ng-repeat="label in posts.items[key].labels">{{ label }}<span ng-if="!$last"> + </span></span></small>
       </a>
     </div>
 
