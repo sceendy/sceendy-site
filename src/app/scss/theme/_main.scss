@@ -106,24 +106,15 @@ article[class^="component"] {
   font-size: 17px;
 }
 
-.sidebar {
-  background: url('http://cdn.stashhh.me/stashboxes/lids/000/000/561/large/iphone-joinem.jpg?1418150524') right top 35% no-repeat;;
-  background-size: cover;
-}
-
 .sidebar--heading {
   text-align: center;
-  padding: 53px 0;
-  font-size: 40px;
-  color: #fff;
-  text-shadow: #555 2px 1px 3px;
+  margin-top: 16px;
 }
 
 .small { //normalizing it back down
   font-size: 0.9em;
   line-height: 1.2;
 }
-
 
 .blog-title {
   margin-bottom: 0;

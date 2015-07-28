@@ -85,3 +85,15 @@
     }
   }
 }
+
+.completed {
+  list-style-type: none;
+  li:before {
+    content: '\f046';
+    font-family: 'FontAwesome';
+    color: $main-pink;
+    margin-right: 5px;
+    line-height: 19px;
+    vertical-align: middle;
+  }
+}

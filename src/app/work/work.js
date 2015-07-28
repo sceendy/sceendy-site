@@ -7,16 +7,20 @@ angular.module('sceendyApp')
   $scope.workItem = [
   {
     client:'Joinem',
-    url: 'www.joinem.com',
+    url: 'web.archive.org/web/20150530073743/https://www.joinem.com/',
     image: '/assets/images/work/joinem.png',
-    skills: ['HTML/SCSS', 'Angular', 'jQuery'],
-    summary: 'Joinem is a single page application built using Angular that consumes a RESTful API. I write frontend code, adhere to SMACSS methodology, and provide support in product design.'
+    skills: ['HTML/SCSS', 'AngularJS', 'jQuery'],
+    screenshots: [
+      '/assets/images/work/joinem/joinem-mobile-left.png',
+      '/assets/images/work/joinem/joinem-mobile-right.png'
+    ],
+    summary: 'Joinem was a single page application built using AngularJS that consumed a RESTful API. I wrote frontend code while adhering to SMACSS methodology and provided support in product design.'
   },
   {
     client:'Extraco Banks',
     url: 'www.extracobanks.com/rewards/',
     image: '/assets/images/work/extraco.png',
-    skills: ['HTML/CSS', 'Angular', 'jQuery'],
+    skills: ['HTML/CSS', 'AngularJS', 'jQuery'],
     summary: 'I built the frontend of the Extraco Rewards page for users to quickly find where they can filter to see where they can aquire Rewards. I did some maintenance after launch as well.'
   },
   {
@@ -30,7 +34,7 @@ angular.module('sceendyApp')
     client:'TX Concussion Partnership',
     url: 'www.txconcussionlaw.com',
     image: '/assets/images/work/tscp.png',
-    skills: ['HTML/SCSS', 'JS', 'Angular', 'PHP'],
+    skills: ['HTML/SCSS', 'JS', 'AngularJS', 'PHP', 'Design'],
     summary: 'Designed and developed a custom WordPress theme, perform monthly maintenance, and currently working on developing a custom WP plugin for the site.'
   },
   {

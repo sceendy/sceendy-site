@@ -4,18 +4,20 @@
       <header class="component-heading">
         <h3>Work</h3>
       </header>
+      <a href="#modal-one" class="btn btn-big">Modal!</a>
     </div>
   </div>
   <div class="row">
-    <a ng-repeat="work in workItem" ng-href="http://{{::work.url}}" class="col-sm-6 work" target="_blank">
-      <img ng-src="{{ ::work.image}}" alt="{{::work.client}}"/>
+    <a ng-repeat="work in workItem" class="col-sm-6 work" ng-href="http://{{ ::work.url }}" target="_blank">
+      <img ng-src="{{ ::work.image }}" alt="{{ ::work.client }}"/>
       <section>
-        <h4>{{work.client}}</h4>
+        <h4>{{ work.client }}</h4>
         <div class="tags" ng-repeat="tag in work.skills">{{tag}}</div>
         <p class="summary">
-          {{work.summary}}
+          {{ work.summary }}
         </p>
       </section>
+      <!--img ng-repeat="screenshot in work.screenshots" ng-src="{{ ::screenshot }}" style="width:30px; display:inline-block; margin-right: 5px;"/-->
     </a>
   </div>
 </article>
