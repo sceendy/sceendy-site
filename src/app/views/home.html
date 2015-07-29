@@ -35,11 +35,11 @@
         <h3>Blog</h3>
       </header>
     </div>
-    <!-- hey, API stuff loading? good show me! -->
+    <!-- hey, the API is being consumed, hold up -->
     <div class="col-md-12" ng-hide="posts.$resolved"><img src="/assets/images/spinner.gif" class="block-center"/></div>
 
     <!-- API data pulled in? cool! -->
-    <div class="col-md-4 col-sm-6 col-xs-12" ng-repeat="(key, post) in posts.items">
+    <div class="col-md-4 col-sm-6 col-xs-12" ng-repeat="(key, post) in posts.items | limitTo: 6 track by $index">
       <a class="blog-entry" ng-href="/#/blog/{{ key }}">
           <h4>{{ posts.items[key].title }}</h4>
           <time>{{ posts.items[key].published | date:'MMMM d, y ' + '@ h:mm a' }}</time>

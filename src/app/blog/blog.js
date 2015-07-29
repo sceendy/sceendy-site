@@ -4,7 +4,7 @@ angular.module('sceendyApp')
 // BLOG Factory: accesses the API and returns the blog data to be used
 .factory('Blog', function($resource) {
   return $resource(
-    'https://www.googleapis.com/blogger/v3/blogs/5718631717220089292/posts?key=AIzaSyCqUv0mNrHN0cEB7gwqiWC0A0rs71lpwgE',
+    'https://www.googleapis.com/blogger/v3/blogs/5718631717220089292/posts?key=AIzaSyCqUv0mNrHN0cEB7gwqiWC0A0rs71lpwgE&fields=kind,items(title, content, published, labels)',
   {
     query: {
       method: 'GET',
