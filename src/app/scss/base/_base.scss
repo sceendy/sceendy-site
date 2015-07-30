@@ -11,7 +11,7 @@ $lightgray: #eee;
 $superlight: #f1f1f1;
 
 /* Link colors */
-$link-hover: darken($main-blue,10%);
+$link-hover: darken($main-blue, 10%);
 
 /* Core Elements */
 html, body {
@@ -57,7 +57,7 @@ h3, .h3 {
 
 h4, .h4 {
   margin-bottom: 0;
-  margin-top: 5px;
+  margin-top: 10px;
   font-size: 16px;
   color: $gray;
 }
