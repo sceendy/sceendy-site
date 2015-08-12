@@ -34,7 +34,7 @@ angular.module('sceendyApp')
     client:'TX Concussion Partnership',
     url: 'www.txconcussionlaw.com',
     image: '/assets/images/work/tscp.png',
-    skills: ['HTML/SCSS', 'JS', 'AngularJS', 'PHP', 'Design'],
+    skills: ['HTML/SCSS', 'JS', 'AngularJS', 'PHP'],
     summary: 'Designed and developed a custom WordPress theme, perform monthly maintenance, and currently working on developing a custom WP plugin for the site.'
   },
   {

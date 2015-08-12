@@ -1,41 +1,50 @@
 .work {
-  position:relative;
-  padding:6px 20px;
-  text-decoration:none;
-  color:#000;
+  position: relative;
+  padding: 6px 20px;
+  text-decoration: none;
+  color: #000;
+  overflow: hidden;
+  border: 1px solid transparent;
   &:hover {
     cursor: pointer;
     text-decoration: none;
-    color: #000;
-    box-shadow: $lightgray 1px 0px 10px 2px;
-    -webkit-transition: box-shadow 1s;
-    transition: box-shadow 1s;
+    border-color: $main-pink;
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(254, 42, 97, 0.7);
+      content: '\f0c1 \A view website';
+      font-family: 'FontAwesome';
+      padding-top: 50%;
+      text-align: center;
+      color: #fff;
+      font-size: 21px;
+      text-shadow: 2px 2px 2px #444;
+    }
   }
   p.summary {
     margin-top: 5px;
-    &:before {
-      content: 'Summary: ';
-      position: relative;
-      font-weight: 600;
-    }
   }
 }
 
 .tags {
   display: inline-block;
   font-size: 0.6em;
-  color: #fff;
+  color: $main-pink;
   line-height: 14px;
-  background-color: $main-pink;
+  background-color: #fff;
   margin: 10px 4px 3px 0;
   padding: 3px 5px;
-  border:  1px solid darken($main-pink, 10%);
+  border: solid 1px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   &:before {
     content: '\f111';
     font-family: 'FontAwesome';
-    color: #fff;
+    color: $main-pink;
     padding-right: 4px;
     font-size: 6px;
     line-height: 14px;
@@ -76,12 +85,12 @@
   a {
     padding: 10px 20px;
     font-weight: 700;
-    border-bottom: 2px #fff solid;
+    border-bottom: 1px #fff solid;
     text-decoration: none;
     color: $main-blue;
     &:hover {
-      border-bottom: 2px darken($main-pink, 10%) solid;
-      color: $link-hover;
+      border-color: $main-blue;
+      -webkit-transition: border-color 1s ease;
     }
   }
 }

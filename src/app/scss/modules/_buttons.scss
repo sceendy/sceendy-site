@@ -1,73 +1,92 @@
 .btn {
-  color:#fff;
-  border-radius:25px;
-  border:0;
-  font-size:13px;
-  display:inline-block;
+  color: #fff;
+  border-radius: 25px;
+  border: 0;
+  font-size: 13px;
+  display: inline-block;
   &:hover {
-    text-decoration:none;
-    color:#fff;
+    text-decoration: none;
+    color: #fff;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   }
   .fa {
-    margin:0 5px;
-  }
-}
-
-.btn-blue {
-  background:$main-blue;
-  border:  1px solid darken($main-blue, 10%);
-  margin-right:5px;
-  padding: 7px 15px;
-  &:hover{
-    background-color:darken($main-blue,10%);
+    margin: 0 5px;
   }
 }
 
 .btn-social{
-  background:$main-blue;
-  border-color:$main-blue;
-  border-radius:50%;
-  border:1px solid;
-  width:30px;
-  height:30px;
-  display:inline-block;
-  text-shadow: darken($main-blue, 10%) 1px 0px 4px;
-  margin:0 3px;
+  border-radius: 50%;
+  border: 1px solid;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  margin: 0 3px;
   &:hover {
     text-shadow:none;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-    background:$link-hover;
+    color: #fff;
+    background: $superlight;
     -webkit-animation-name: spinnerRotate;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: linear;
     -moz-animation-name: spinnerRotate;
-    -moz-animation-duration: 2s;
-    -moz-animation-iteration-count: 1;
-    -moz-animation-timing-function: linear;
     -ms-animation-name: spinnerRotate;
-    -ms-animation-duration: 2s;
+
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+      -ms-animation-duration: 2s;
+
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
     -ms-animation-iteration-count: 1;
+
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
     -ms-animation-timing-function: linear;
   }
   .fa {
     display:inline-block;
     width: 30px;
     text-align: center;
-    font-size:19px;
+    font-size: 19px;
     vertical-align: middle;
-    line-height:31px;
-    color:#fff;
+    line-height: 31px;
+  }
+  &.dribbble {
+    background: #ea4c89;
+    border-color: darken(#ea4c89, 5%);
+  }
+  &.codepen {
+    background: #fff;
+    color: black;
+    &:hover {
+      border-color: black;
+    }
+  }
+  &.github {
+    background: #171515;
+    border-color: darken(#171515, 5%);
   }
 }
 
 .btn-pink {
-  background:$main-pink;
-  margin-right:5px;
+  background: #fff;
+  color: $main-pink;
+  margin-right: 5px;
   padding: 7px 15px;
   border:  1px solid darken($main-pink, 10%);
+  &:hover {
+    background-color: darken($main-pink,10%);
+  }
+}
+
+.btn-blue {
+  background: #fff;
+  color:$main-blue;
+  border:  1px solid darken($main-blue, 10%);
+  margin-right:5px;
+  padding: 7px 15px;
   &:hover{
-    background-color:darken($main-pink,10%);
+    background-color:darken($main-blue,10%);
   }
 }
