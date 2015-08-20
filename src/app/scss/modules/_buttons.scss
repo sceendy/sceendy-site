@@ -1,9 +1,10 @@
 .btn {
   color: #fff;
   border-radius: 25px;
-  border: 0;
+  border: 1px solid;
   font-size: 13px;
   display: inline-block;
+  width: auto;
   &:hover {
     text-decoration: none;
     color: #fff;
@@ -16,7 +17,6 @@
 
 .btn-social{
   border-radius: 50%;
-  border: 1px solid;
   color: #fff;
   width: 30px;
   height: 30px;
@@ -34,7 +34,7 @@
 
     -webkit-animation-duration: 2s;
     -moz-animation-duration: 2s;
-      -ms-animation-duration: 2s;
+    -ms-animation-duration: 2s;
 
     -webkit-animation-iteration-count: 1;
     -moz-animation-iteration-count: 1;
@@ -74,7 +74,7 @@
   color: $main-pink;
   margin-right: 5px;
   padding: 7px 15px;
-  border:  1px solid darken($main-pink, 10%);
+  border-color: darken($main-pink, 10%);
   &:hover {
     background-color: darken($main-pink,10%);
   }
@@ -82,11 +82,11 @@
 
 .btn-blue {
   background: #fff;
-  color:$main-blue;
-  border:  1px solid darken($main-blue, 10%);
-  margin-right:5px;
+  color: $main-blue;
+  border-color: darken($main-blue, 10%);
+  margin-right: 5px;
   padding: 7px 15px;
   &:hover{
-    background-color:darken($main-blue,10%);
+    background-color: darken($main-blue,10%);
   }
 }

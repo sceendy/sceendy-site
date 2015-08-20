@@ -14,6 +14,12 @@ $superlight: #f1f1f1;
 $link-hover: darken($main-blue, 10%);
 
 /* Core Elements */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 html, body {
   margin: 0;
   color: $darkgray;
@@ -94,6 +100,5 @@ img {
 figcaption {
   font-style: italic;
   font-size: 0.7em;
-  text-align: center;
   color: #999;
 }

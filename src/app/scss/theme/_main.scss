@@ -20,6 +20,8 @@ time {
 
 .text-center {
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .block-center {
@@ -114,15 +116,16 @@ article[class^="component"] {
 }
 
 .text-headline {
-  font-size: 1.3em;
+  font-size: 1.1rem;
   font-style: italic;
-  color: #999;
+  color: #9C9C9C;
+  font-weight: 600;
 }
 
 .img-section {
-  margin-top: 25px;
+  margin-top: 20px;
 }
 
 .text-block {
-  margin-top: 8px;
+  margin-top: 5px;
 }
