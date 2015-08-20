@@ -45,12 +45,22 @@ code {
   background: #eee;
   border-radius: 2px;
   padding: 15px;
-  border: #E5E5E5 solid 1px;
+  border: $lightgray solid 1px;
   font-size: 12px;
   display: block;
   margin: 10px 0;
 }
 
+.code-inline {
+  background: #eee;
+  border-radius: 2px;
+  border: $lightgray solid 1px;
+  line-height: 22px;
+  padding: 0 5px;
+  color: darken($main-blue, 15%);
+  font-family: monospace;
+  font-size: 0.9em;
+}
 .fa-heart {
   color: $main-pink;
   margin: 0 3px;
@@ -128,4 +138,12 @@ article[class^="component"] {
 
 .text-block {
   margin-top: 5px;
+}
+
+.indent {
+  margin-left: 10px;
+}
+
+.text-pink {
+  color: $main-pink;
 }
