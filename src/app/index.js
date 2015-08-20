@@ -8,6 +8,11 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
         templateUrl: 'app/views/home.html',
         title: 'Home'
       })
+      .when('/about', {
+        templateUrl: 'app/views/about.html',
+        controller: 'aboutController',
+        title: 'About Me'
+      })
       .when('/work', {
         templateUrl: 'app/work/work.html',
         controller: 'workController',

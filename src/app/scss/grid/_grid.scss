@@ -59,9 +59,8 @@ $half-gutter-adjustment: -$half-gutter;
 }
 
 .container {
-  margin:0 auto;
-  width:80%;
-	max-width:800px;
+  margin: 0 auto;
+	max-width: 800px;
 }
 
 @mixin col {
