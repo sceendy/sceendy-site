@@ -30,7 +30,7 @@ $half-gutter-adjustment: -$half-gutter;
  * Really wish Sass had a notion of a switch statement, but this will have to do for now...
  */
 @function get-col-percent($column-num) {
-			 @if $column-num == 1  { @return  8.333333333%; }
+	@if $column-num == 1  { @return  8.333333333%; }
 	@else if $column-num == 2  { @return 16.666666667%; }
 	@else if $column-num == 3  { @return 25%; }
 	@else if $column-num == 4  { @return 33.333333333%;	}
@@ -61,6 +61,8 @@ $half-gutter-adjustment: -$half-gutter;
 .container {
   margin: 0 auto;
 	max-width: 800px;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 @mixin col {
