@@ -1,17 +1,21 @@
 'use strict';
-
 angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', 'ngSanitize', 'truncate'])
-  .config(function($routeProvider) {
 
+  .config(function($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'app/views/home.html',
-        title: 'Home'
+        controller: 'blogController',
+        title: 'Home',
+        resolve: {
+          posts: function(Blog) { // Inject a resource named 'Blog'
+            return Blog.get();
+          }
+        }
       })
       .when('/about', {
         templateUrl: 'app/views/about.html',
-        controller: 'aboutController',
-        title: 'About Me'
+        title: 'About'
       })
       .when('/work', {
         templateUrl: 'app/work/work.html',
@@ -21,12 +25,22 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
       .when('/blog', {
         templateUrl: 'app/blog/blog.html',
         controller: 'blogController',
-        title: 'Blog'
+        title: 'Blog',
+        resolve: {
+          posts: function(Blog) { // Inject a resource named 'Blog'
+            return Blog.get();
+          }
+        }
       })
       .when('/blog/:id', {
         templateUrl: 'app/blog/entry.html',
         controller: 'blogController',
-        title: 'Blog Post'
+        title: 'Blog Post',
+        resolve: {
+          posts: function(Blog) { // Inject a resource named 'Blog'
+            return Blog.get();
+          }
+        }
       })
 
       .otherwise ({
@@ -36,6 +50,7 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
 
   // APP Controller: allows for dynamic title and generates current year for footer
   .controller('appController', function($rootScope, $scope) {
+
     $rootScope.$on('$routeChangeSuccess', function(event, current) {
       $rootScope.title = current.title;
     });

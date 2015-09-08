@@ -3,17 +3,19 @@
     <header class="component-heading">
       <h3>most recently worked on</h3>
     </header>
+  </div>
+  <div class="col-md-12">
     <figure class="text-center">
-      <img src="assets/images/notifications.png" alt="Joinem" class="img-section"/>
+      <img src="assets/images/notifications.png" alt="Joinem"/>
       <figcaption>
         <strong>Joinem</strong> - a social ecommerce platform. <br/>Oh, hey, I designed that notifications popover ;)</figcaption>
     </figure>
-    <div class="text-center">
+    <div class="block-center">
       <a class="btn btn-pink" href="/#/work" role="button">view my work</a>
     </div>
   </div>
 </section>
-<article ng-controller="blogController" class="component-portfolio">
+<article class="component-portfolio">
   <div class="row">
     <div class="col-md-12 col-xs-12">
       <header class="component-heading">
@@ -24,11 +26,11 @@
     <div class="col-md-12" ng-hide="posts.$resolved"><img src="/assets/images/spinner.gif" class="block-center"/></div>
 
     <!-- API data pulled in? cool! -->
-    <div class="col-md-4 col-sm-6 col-xs-12" ng-repeat="(key, post) in posts.items | limitTo: 6 track by $index">
-      <a class="blog-entry" ng-href="/#/blog/{{ key }}">
-          <h4>{{ posts.items[key].title }}</h4>
-          <time>{{ posts.items[key].published | date:'MMMM d, y ' + '@ h:mm a' }}</time>
-          <small><strong>topics</strong>: <span ng-repeat="label in posts.items[key].labels">{{ label }}<span ng-if="!$last"> + </span></span></small>
+    <div class="col-md-4 col-sm-6 col-xs-12" ng-repeat="(postId, post) in posts.items | limitTo: 6 track by $index">
+      <a class="blog-entry" ng-href="/#/blog/{{ postId }}">
+          <h4>{{ posts.items[postId].title }}</h4>
+          <time>{{ posts.items[postId].published | date:'MMMM d, y ' + '@ h:mm a' }}</time>
+          <small><strong>topics</strong>: <span ng-repeat="label in posts.items[postId].labels">{{ label }}<span ng-if="!$last"> + </span></span></small>
       </a>
     </div>
 

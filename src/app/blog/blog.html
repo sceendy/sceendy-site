@@ -7,11 +7,13 @@
     </div>
   </div>
   <div class="row">
-    <a class="blog-entry col-md-6"   ng-repeat="(key, post) in posts.items" ng-href="/#/blog/{{ key }}">
-      <h4>{{posts.items[key].title}}</h4>
-      <time class="small">{{posts.items[key].published | date:'MMMM d, y' : 'UTC'}}</time>
-      <p class="summary" ng-bind-html="posts.items[key].content | words:25"></p>
-      <small><strong>related to:</strong> <span ng-repeat="label in posts.items[key].labels">{{ label }}<span ng-if="!$last"> + </span></span></small>
+    <div class="col-md-12" ng-hide="posts.$resolved"><img src="/assets/images/spinner.gif" class="block-center"/></div>
+    
+    <a class="blog-entry col-md-6"   ng-repeat="(postId, post) in posts.items" ng-href="/#/blog/{{ postId }}">
+      <h4>{{posts.items[postId].title}}</h4>
+      <time class="small">{{posts.items[postId].published | date:'MMMM d, y' : 'UTC'}}</time>
+      <p class="summary" ng-bind-html="posts.items[postId].content | words:25"></p>
+      <small><strong>related to:</strong> <span ng-repeat="label in posts.items[postId].labels">{{ label }}<span ng-if="!$last"> + </span></span></small>
     </a>
   </div>
 </article>
