@@ -27,7 +27,8 @@
 
     <!-- API data pulled in? cool! -->
     <div class="col-md-4 col-sm-6 col-xs-12" ng-repeat="(postId, post) in posts.items | limitTo: 6 track by $index">
-      <a class="blog-entry" ng-href="/#/blog/{{ postId }}">
+      <a class="blog-entry" ng-href="/#/blog/{{postId}}">
+        <!-- use {{ slug(posts.items[postId].url) }} -->
           <h4>{{ posts.items[postId].title }}</h4>
           <time>{{ posts.items[postId].published | date:'MMMM d, y ' + '@ h:mm a' }}</time>
           <small><strong>topics</strong>: <span ng-repeat="label in posts.items[postId].labels">{{ label }}<span ng-if="!$last"> + </span></span></small>
