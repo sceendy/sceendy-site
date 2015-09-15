@@ -6,7 +6,9 @@ angular.module('sceendyApp')
   var key = 'AIzaSyCqUv0mNrHN0cEB7gwqiWC0A0rs71lpwgE';
   //var entireBlog = function() {
   return $resource(
-    'https://www.googleapis.com/blogger/v3/blogs/5718631717220089292/posts?key=' + key + '&fields=kind,items(title, content, published, labels)',
+    'https://www.googleapis.com/blogger/v3/blogs/5718631717220089292/posts?key=' + key + '&fields=kind,items(title, content, published, labels)', {
+      maxResults: 20
+    },
   {
     query: {
       method: 'GET',

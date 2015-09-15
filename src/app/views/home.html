@@ -34,10 +34,12 @@
       </a>
     </div>
 
-    <div class="col-md-4 col-xs-12 block-center" ng-if="!post.items.length%2 == 0">
-      <a href="/#/blog" class="blog-block">
-        View older posts...
-      </a>
+    <div class="col-md-12 col-xs-12" ng-if="!posts.items.length%2 == 0">
+      <div class="block-center">
+        <a href="/#/blog" class="btn btn-pink">
+          older posts...
+        </a>
+      </div>
     </div>
 
   </div>
