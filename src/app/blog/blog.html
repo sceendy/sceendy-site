@@ -9,7 +9,8 @@
   <div class="row">
     <div class="col-md-12 col-xs-12" ng-hide="posts.$resolved"><img src="/assets/images/spinner.gif" class="block-center"/></div>
 
-    <a class="blog-entry col-md-6 col-xs-12" ng-repeat="(postId, post) in posts.items" ng-href="/#/blog/{{ postId }}">
+    <a class="blog-entry col-md-6 col-xs-12" ng-repeat="(postId, post) in posts.items" ng-href="/#/blog/{{postId}}">
+      <!-- use {{ slug(posts.items[postId].url) }} -->
       <h4>{{posts.items[postId].title}}</h4>
       <time class="small">{{posts.items[postId].published | date:'MMMM d, y' : 'UTC'}}</time>
       <p class="summary" ng-bind-html="posts.items[postId].content | words:25"></p>

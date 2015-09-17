@@ -8,8 +8,8 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
         controller: 'blogController',
         title: 'Home',
         resolve: {
-          posts: function(Blog) { // Inject a resource named 'Blog'
-            return Blog.get();
+          posts: function(Blog) { // Inject Blog resource
+            return Blog;
           }
         }
       })
@@ -27,18 +27,25 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
         controller: 'blogController',
         title: 'Blog',
         resolve: {
-          posts: function(Blog) { // Inject a resource named 'Blog'
-            return Blog.get();
+          posts: function(Blog) { // Inject Blog resource
+            return Blog;
           }
         }
       })
-      .when('/blog/:id', {
+      .when('/blog/:id', { // use :slug
         templateUrl: 'app/blog/entry.html',
         controller: 'blogController',
         title: 'Blog Post',
         resolve: {
-          posts: function(Blog) { // Inject a resource named 'Blog'
-            return Blog.get();
+          /*slug: function(Blog, $route, $routeParams, $rootScope){
+            var postUrl = JSON.stringify($route.current.params);
+            console.log('postUrl: ' + postUrl + $routeParams); // for testing
+            var urlPattern = /http:\/\/sceendy\.blogspot\.com\/\d{4}\/\d{2}\/([a-zA-z0-9\-]+)\.html/g;
+            var slugged = urlPattern.exec(postUrl);
+            return (0);
+          },*/
+          posts: function(Blog) {
+            return Blog;
           }
         }
       })
