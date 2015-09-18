@@ -1,13 +1,13 @@
 <article class="component-entry">
   <div class="row">
     <header class="col-md-12 col-xs-12">
-      <h2 class="blog-title">{{posts.items[postId].title}}</h2>
-      <time class="small">{{posts.items[postId].published | date:'MMMM d, y ' + '@ h:mm a' }}</time>
+      <h2 class="blog-title">{{posts.items[id].title}}</h2>
+      <time class="small">{{posts.items[id].published | date:'MMMM d, y ' + '@ h:mm a' }}</time>
     </header>
   </div>
   <div class="row">
     <section class="col-md-12 col-xs-12">
-      <p class="blog-text" ng-bind-html="blogContent(postId)"></p>
+      <p class="blog-text" ng-bind-html="blogContent(id)"></p>
       <h5 class="text-center heading-blue-border">Have a question or comment?<br/>Ask me anything: <a href="http://twitter.com/home?status=@sceendy">@sceendy</a></h5>
     </section>
   </div>
