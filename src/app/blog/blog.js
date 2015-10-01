@@ -24,14 +24,14 @@ angular.module('sceendyApp')
 
   // sanitize the html, allowing tags from blogger api
   $scope.blogContent = function(id) {
-    if ($scope.posts.items && $scope.id){
+    if ($scope.posts.items && id){
       return $sce.trustAsHtml($scope.posts.items[id].content);
     }
   };
 
   // create slug for blog entries --> slug(post.url)
   $scope.slug = function(postUrl){
-    if ($scope.posts.items && $scope.id){
+    if ($scope.posts.items && postUrl){
       var urlPattern = /http:\/\/sceendy\.blogspot\.com\/\d{4}\/\d{2}\/([a-zA-z0-9\-]+)\.html/g;
       var slugged = urlPattern.exec(postUrl);
       return slugged[1];

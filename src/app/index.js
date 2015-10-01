@@ -1,8 +1,8 @@
 'use strict';
 angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', 'ngSanitize', 'truncate'])
 
-  .config(function($routeProvider, $locationProvider, window) {
-    $locationProvider .hashPrefix('!');
+.config(function($routeProvider, $locationProvider) {
+    $locationProvider.hashPrefix('!');
     if(window.history && window.history.pushState){
       $locationProvider.html5Mode({enabled: true,  requireBase: false});
     }

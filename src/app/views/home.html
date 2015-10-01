@@ -27,7 +27,7 @@
 
     <!-- API data pulled in? cool! -->
     <div class="col-md-4 col-sm-6 col-xs-12" ng-repeat="(id, post) in posts.items | limitTo: 6 track by post.id">
-      <a class="blog-entry" ng-href="/blog/{{id}}">
+      <a class="blog-entry" ng-href="/blog/{{ id }}">
         <!-- slug(post.url) -->
         <h4>{{ post.title }}</h4>
         <time>{{ post.published | date:'MMMM d, y ' + '@ h:mm a' }}</time>
