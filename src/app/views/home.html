@@ -26,7 +26,7 @@
     <div class="col-md-12 col-xs-12" ng-hide="posts.$resolved"><img src="/assets/images/spinner.gif" class="block-center"/></div>
 
     <!-- API data pulled in? cool! -->
-    <div ng-repeat="(id, post) in posts.items | limitTo: 6 track by post.id" class="col-md-12">
+    <div ng-repeat="(id, post) in posts.items | limitTo: 6 track by post.id" class="col-md-12 col-xs-12">
       <a ng-href="/blog/{{ id }}" class="blog-entry">
         <!-- slug(post.url) -->
         <div class="row">
