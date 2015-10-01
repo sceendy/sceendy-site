@@ -16,7 +16,6 @@ angular.module('sceendyApp')
   return blog;
 })
 
-
 // BLOG Controller: assigns blog data some values
 .controller('blogController', function($scope, $routeParams, Blog, $sce, posts) {
   $scope.posts = posts;

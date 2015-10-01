@@ -4,8 +4,6 @@
 }
 
 time {
-  font-size: 13px;
-  line-height: 1.2;
   color: #888;
   display: block;
 }
@@ -25,8 +23,10 @@ time {
 }
 
 .xs-center {
-  text-align: center;
-  margin: 1em auto 0;
+  @media screen and (max-width:420px){
+    text-align: center;
+    margin: 1em auto 0;
+  }
 }
 .block-center {
   display: block;
@@ -50,9 +50,12 @@ code {
   border-radius: 2px;
   padding: 15px;
   border: $lightgray solid 1px;
-  font-size: 12px;
+  font-size: 0.9rem;
   display: block;
   margin: 10px 0;
+  .indent {
+    margin-left: 15px;
+  }
 }
 
 .code-inline {
@@ -63,11 +66,7 @@ code {
   padding: 0 5px;
   color: darken($main-blue, 15%);
   font-family: monospace;
-  font-size: 0.9em;
-}
-.fa-heart {
-  color: $main-pink;
-  margin: 0 3px;
+  font-size: 0.9rem;
 }
 
 article[class^="component"] {
@@ -78,16 +77,15 @@ article[class^="component"] {
   color: #767676;
   border-bottom: 2px #eee solid;
   padding-left: 0;
+  margin-bottom: 10px;
 }
 
 .blog-entry {
-  padding: 10px 10px 12px;
-  margin-bottom: 5px;
-  display: inline-block;
-  border-bottom: solid 4px transparent;
+  padding: 15px 10px;
+  border-left: solid 4px transparent;
   &:hover {
     text-decoration: none;
-    border-bottom: solid 4px;
+    border-left: solid 4px;
     background-color: #f1f1f1;
   }
   .summary {
@@ -121,23 +119,25 @@ article[class^="component"] {
 }
 
 .small { //normalizing it back down
-  font-size: 0.9em;
+  font-size: 0.8rem;
   line-height: 1.2;
 }
 
 .blog-title {
   margin-bottom: 0;
+  color: $gray;
 }
 
 .text-headline {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-style: italic;
-  color: #9C9C9C;
-  font-weight: 600;
+  background: $lightgray;
+  color: $main-blue;
+  padding: 5px;
 }
 
-.img-section {
-  margin-top: 20px;
+.top-space {
+  margin-top: 20px!important//e;
 }
 
 .text-block {

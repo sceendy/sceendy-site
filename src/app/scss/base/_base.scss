@@ -23,9 +23,10 @@ $link-hover: darken($main-blue, 10%);
 html, body {
   margin: 0;
   color: $darkgray;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 15px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 16px;
 }
+
 html {
   height: 100%;
 }
@@ -43,19 +44,21 @@ h1 {
   text-transform: uppercase;
   margin-top: 10px;
   margin-bottom: 0;
+  // font-size: 2.0em; default
 }
 
 h2 {
-  color: #5e5e5e;
+  color: $darkgray;
   margin-top: 0;
   margin-bottom: 15px;
   font-weight: 100;
   letter-spacing: initial;
-  font-size: 20px;
+  font-size: 1.6rem;
 }
 
 h3, .h3 {
-  font-size: 18px;
+  color: $gray;
+  font-size: 1.4rem;
   padding: 5px 0;
   margin: 5px 0;
   text-transform: lowercase;
@@ -64,12 +67,12 @@ h3, .h3 {
 h4, .h4 {
   margin-bottom: 0;
   margin-top: 10px;
-  font-size: 16px;
+  font-size: 1.2rem;
   color: $gray;
 }
 
 blockquote {
-  font-size: 16px;
+  font-size: 1.1rem;
   font-style: italic;
   color: #818181;
   padding: 15px;
@@ -81,6 +84,7 @@ blockquote {
 
 p {
   color: #4F4F4F;
+  line-height: 1.6;
 }
 
 a {
@@ -99,6 +103,7 @@ img {
 
 figcaption {
   font-style: italic;
-  font-size: 0.7em;
+  font-size: 0.7rem;
   color: #999;
+  margin-top: 5px;
 }

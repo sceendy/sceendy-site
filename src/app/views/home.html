@@ -26,17 +26,22 @@
     <div class="col-md-12 col-xs-12" ng-hide="posts.$resolved"><img src="/assets/images/spinner.gif" class="block-center"/></div>
 
     <!-- API data pulled in? cool! -->
-    <div class="col-md-4 col-sm-6 col-xs-12" ng-repeat="(id, post) in posts.items | limitTo: 6 track by post.id">
-      <a class="blog-entry" ng-href="/blog/{{ id }}">
+    <div ng-repeat="(id, post) in posts.items | limitTo: 6 track by post.id" class="col-md-12">
+      <a ng-href="/blog/{{ id }}" class="blog-entry">
         <!-- slug(post.url) -->
-        <h4>{{ post.title }}</h4>
-        <time>{{ post.published | date:'MMMM d, y ' + '@ h:mm a' }}</time>
-        <small><strong>topics</strong>: <span ng-repeat="label in post.labels">{{ label }}<span ng-if="!$last"> + </span></span></small>
+        <div class="row">
+          <div class="col-md-6 col-xs-12">
+            <div class="blog-title xs-center">{{ post.title }}</div>
+          </div>
+          <div class="col-md-6 col-xs-12">
+            <time class="text-right xs-center">{{ post.published | date:'MMMM d, y ' }}</time>
+          </div>
+        </div>
       </a>
     </div>
 
     <div class="col-md-12 col-xs-12" ng-if="!posts.items.length%2 == 0">
-      <div class="block-center">
+      <div class="block-center top-space">
         <a href="/blog" class="btn btn-pink">
           older posts...
         </a>

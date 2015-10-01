@@ -1,8 +1,9 @@
 'use strict';
-angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', 'ngSanitize', 'truncate'])
+angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngDisqus', 'ngResource', 'ngRoute', 'ngSanitize', 'truncate'])
 
-.config(function($routeProvider, $locationProvider) {
+.config(function($routeProvider, $locationProvider, $disqusProvider) {
     $locationProvider.hashPrefix('!');
+    $disqusProvider.setShortname('sceendyBlog');
     if(window.history && window.history.pushState){
       $locationProvider.html5Mode({enabled: true,  requireBase: false});
     }
@@ -64,6 +65,5 @@ angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngResource', 'ngRoute', '
     $rootScope.$on('$routeChangeSuccess', function(event, current) {
       $rootScope.title = current.title;
     });
-
     $scope.currentYear = (new Date().getFullYear());
   });
