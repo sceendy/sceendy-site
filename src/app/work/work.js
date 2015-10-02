@@ -14,21 +14,21 @@ angular.module('sceendyApp')
       '/assets/images/work/joinem/joinem-mobile-left.png',
       '/assets/images/work/joinem/joinem-mobile-right.png'
     ],
-    summary: 'Joinem was a single page application built using AngularJS that consumed a RESTful API. I wrote frontend code while adhering to SMACSS methodology and provided support in product design.'
+    summary: 'Joinem was an SPA built using AngularJS + Sass that consumed a RESTful API. Architected, implemented, and iterated on frontend designs and user interactions.'
   },
   {
     client:'Extraco Banks',
     url: 'www.extracobanks.com/rewards/',
     image: '/assets/images/work/extraco.png',
     skills: ['HTML/CSS', 'AngularJS', 'jQuery'],
-    summary: 'I built the frontend of the Extraco Rewards page for users to quickly find where they can filter to see where they can aquire Rewards. I did some maintenance after launch as well.'
+    summary: 'I built the Extraco Rewards page for users to quickly find where they can filter to see where they can aquire Rewards. I did some maintenance after launch as well.'
   },
   {
     client:'TSATA',
     url: 'www.tsata.com',
     image: '/assets/images/work/tsata.png',
     skills: ['HTML/LESS', 'JS','PHP'],
-    summary: 'I launched their new site for which I created a custom WordPress theme. Customized a job manager plugin to suit their needs. I continue to update and do maintenance from time to time.'
+    summary: 'I launched their new site for which I created a custom WordPress theme. Customized a job manager plugin to suit their needs. I handle ongoing maintenance.'
   },
   {
     client:'TX Concussion Partnership',
@@ -42,7 +42,7 @@ angular.module('sceendyApp')
     url: 'ticketdeals.studiomoviegrill.com/',
     image: '/assets/images/work/smg.png',
     skills: ['HTML/CSS', 'PHP'],
-    summary: 'Studio Movie Grill has $5 ticket deals that were initially only available on Facebook but I built a micro-site for them that made them available that didn\'t require movie goers to have a Facebook account.'
+    summary: 'The $5 ticket deals were initially only available through a Facebook app. I built a micro-site allowing users access to them that didn\'t require a Facebook account.'
   },
   {
     client:'Visionworks',
@@ -56,14 +56,14 @@ angular.module('sceendyApp')
     url: 'www.stagestores.com/store/account/findyourstore.jsp',
     image: '/assets/images/work/stagestores.png',
     skills: ['HTML/CSS', 'PHP'],
-    summary: 'While at Apollo Interactive, I handled the maintenance on the Stage Stores website and developed the interface for their store locator.'
+    summary: 'I handled the maintenance on the Stage Stores website and developed the interface for their store locator. I also managed some of the content on the site.'
   },
   {
     client:'Wingstop',
     url: 'www.wingstop.com',
     image: '/assets/images/work/wingstop.png',
     skills: ['HTML/CSS', 'PHP'],
-    summary: 'While at Apollo Interactive, I performed front-end maintenance for Wingstop website along with improvements throughout the site including the Franchise pages.'
+    summary: 'I performed front-end maintenance for the Wingstop website. Implemented improvements throughout the site including the Franchise and Store Locator pages.'
   },
   {
     client:'KHYI 95.3FM',
@@ -77,7 +77,7 @@ angular.module('sceendyApp')
     url: 'french.curves.com',
     image: '/assets/images/work/curves.png',
     skills: ['HTML/CSS', 'PHP'],
-    summary: 'While at Apollo Interactive, I maintained and created new pages for the international Curves websites that included Australia, New Zealand, France, and the UK.'
+    summary: 'I created new pages and maintained assets/existing pages for the international Curves websites that included Australia, New Zealand, France, and the UK.'
   }
   ];
 });

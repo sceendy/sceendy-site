@@ -9,12 +9,20 @@
   <div class="row">
     <div class="col-md-12 col-xs-12" ng-hide="posts.$resolved"><img src="/assets/images/spinner.gif" class="block-center"/></div>
 
-    <a class="blog-entry col-md-6 col-xs-12" ng-repeat="(id, post) in posts.items" ng-href="/blog/{{ id }} ">
+    <a class="blog-entry col-md-12 col-xs-12" ng-repeat="(id, post) in posts.items track by post.id" ng-href="/blog/{{ id }} ">
       <!-- slug(post.url) -->
       <h4>{{post.title}}</h4>
       <time class="small">{{post.published | date:'MMMM d, y' : 'UTC'}}</time>
-      <p class="summary" ng-bind-html="post.content | words:25"></p>
+      <p class="summary" ng-bind-html="post.content | words:35"></p>
       <small><strong>related to:</strong> <span ng-repeat="label in post.labels">{{ label }}<span ng-if="!$last"> + </span></span></small>
     </a>
   </div>
+  <div class="row">
+    <div class="col-md-12 col-xs-12">
+      <ul class="pagination">
+        <li class="page--btn-disabled">1</li>
+      </ul>
+    </div>
+  </div>
+
 </article>

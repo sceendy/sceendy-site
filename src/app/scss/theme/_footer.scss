@@ -5,17 +5,17 @@ footer {
   bottom: 0;
   position: absolute;
   width: 100%;
-  padding:10px 0;
-  @media screen and (max-width:420px){
-    text-align:center;
+  padding: 10px 0;
+  @media screen and (max-width: 740px){
+    text-align: center;
   }
   p {
-    font-size:11px;
+    font-size: 11px;
   }
 
 }
 
-.blog-footer{
-  color:$main-pink;
-  font-size:.8em;
+.blog-footer {
+  color: $main-pink;
+  font-size: 0.8em;
 }

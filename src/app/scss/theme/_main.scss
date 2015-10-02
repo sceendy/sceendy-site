@@ -6,14 +6,18 @@
 time {
   color: #888;
   display: block;
+  margin-top: 10px;
+  &.time--large {
+    text-align: right;
+    @media screen and (max-width:740px){
+      text-align: left;
+      margin-top: 0;
+    }
+  }
 }
 
 .middle-earth {
   @include align-items(center);
-}
-
-.text-right {
-  text-align: right;
 }
 
 .text-center {
@@ -23,18 +27,23 @@ time {
 }
 
 .xs-center {
-  @media screen and (max-width:420px){
+  @media screen and (max-width: 420px){
     text-align: center;
     margin: 1em auto 0;
   }
 }
+
+.text-right {
+  text-align: right;
+}
+
 .block-center {
   display: block;
   margin: 0 auto;
 }
 
 .sm-hide {
-  @media screen and (max-width:740px){
+  @media screen and (max-width: 740px){
     display: none;
   }
 }
@@ -81,7 +90,7 @@ article[class^="component"] {
 }
 
 .blog-entry {
-  padding: 15px 10px;
+  padding: 10px 20px 20px;
   border-left: solid 4px transparent;
   &:hover {
     text-decoration: none;
@@ -118,13 +127,15 @@ article[class^="component"] {
   margin-top: 16px;
 }
 
-.small { //normalizing it back down
+.small {
   font-size: 0.8rem;
   line-height: 1.2;
 }
 
 .blog-title {
   margin-bottom: 0;
+  margin-top: 1.2em;
+  margin-top: 10px;
   color: $gray;
 }
 

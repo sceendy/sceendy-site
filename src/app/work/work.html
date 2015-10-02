@@ -6,18 +6,23 @@
       </header>
     </div>
   </div>
-  <div class="row">
-    <a ng-repeat="work in workItem" class="col-sm-6 work" ng-href="http://{{ ::work.url }}" target="_blank">
-      <img ng-src="{{ ::work.image }}" alt="{{ ::work.client }}"/>
-      <section>
-        <h4>{{ ::work.client }}</h4>
-        <div class="tags" ng-repeat="tag in work.skills">{{::tag}}</div>
+  <a ng-repeat="work in workItem" class="work" ng-href="http://{{ ::work.url }}" target="_blank">
+    <div class="row">
+      <div class="col-sm-6 ">
+        <img ng-src="{{ ::work.image }}" alt="{{ ::work.client }}" class="top-space"/>
+
+      </div>
+      <div class="col-sm-6">
+        <section>
+          <h4>{{ ::work.client }}</h4>
+          <div class="tags" ng-repeat="tag in work.skills">{{::tag}}</div>
+        </section>
         <p class="summary">
-          <strong>Summary:</strong>
+          <strong>Details:</strong>
           {{ ::work.summary }}
         </p>
-      </section>
-      <!--img ng-repeat="screenshot in work.screenshots" ng-src="{{ ::screenshot }}" style="width:30px; display:inline-block; margin-right: 5px;"/-->
-    </a>
-  </div>
+      </div>
+    </div>
+    <!--img ng-repeat="screenshot in work.screenshots" ng-src="{{ ::screenshot }}" style="width:30px; display:inline-block; margin-right: 5px;"/-->
+  </a>
 </article>

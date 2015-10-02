@@ -1,14 +1,16 @@
 .work {
   position: relative;
+  display: block;
   padding: 6px 20px;
   text-decoration: none;
   color: #000;
   overflow: hidden;
-  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+  margin-bottom: 15px;
   &:hover {
     cursor: pointer;
     text-decoration: none;
-    border-bottom-color: $main-pink;
+    border-left-color: $main-pink;
     &:before {
       position: absolute;
       top: 0;
@@ -18,10 +20,10 @@
       background: rgba(241, 241, 241, 0.8);
       content: '\f0c1 \A view website';
       font-family: 'FontAwesome';
-      padding-top: 50%;
+      padding-top: 12%;
       text-align: center;
       color: $main-pink;
-      font-size: 21px;
+      font-size: 1.3em;
       text-shadow: 2px 2px 2px #fff;
     }
   }
@@ -58,7 +60,7 @@
   height: 40px;
 }
 
-.user span{
+.user span {
   display: block;
 }
 
@@ -105,5 +107,28 @@
     margin-right: 5px;
     line-height: 19px;
     vertical-align: middle;
+  }
+}
+
+.pagination {
+  list-style-type: none;
+  text-align: center;
+  padding-left: 0;
+  li {
+    display: inline-block;
+    color: $main-blue;
+    border-radius: 25px;
+    padding: 5px 10px;
+    text-align: center;
+    &:hover {
+      background: $link-hover;
+      color: #fff;
+      cursor: pointer;
+    }
+    &.page--btn-disabled {
+      background: lighten($link-hover, 15%);
+      color: #fff;
+      cursor: not-allowed;
+    }
   }
 }

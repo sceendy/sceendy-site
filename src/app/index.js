@@ -2,11 +2,13 @@
 angular.module('sceendyApp', ['ngAnimate', 'ngTouch', 'ngDisqus', 'ngResource', 'ngRoute', 'ngSanitize', 'truncate'])
 
 .config(function($routeProvider, $locationProvider, $disqusProvider) {
+
     $locationProvider.hashPrefix('!');
     $disqusProvider.setShortname('sceendyBlog');
     if(window.history && window.history.pushState){
       $locationProvider.html5Mode({enabled: true,  requireBase: false});
     }
+
     $routeProvider
       .when('/', {
         templateUrl: 'app/views/home.html',

@@ -30,11 +30,11 @@
       <a ng-href="/blog/{{ id }}" class="blog-entry">
         <!-- slug(post.url) -->
         <div class="row">
-          <div class="col-md-6 col-xs-12">
-            <div class="blog-title xs-center">{{ post.title }}</div>
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="blog-title">{{ post.title }}</div>
           </div>
-          <div class="col-md-6 col-xs-12">
-            <time class="text-right xs-center">{{ post.published | date:'MMMM d, y ' }}</time>
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <time class="time--large">{{ post.published | date:'MMMM d, y ' }}</time>
           </div>
         </div>
       </a>
